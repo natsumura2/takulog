@@ -1,0 +1,1302 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<title>butterflies in our stomach</title>
+<style>
+*{margin:0;padding: 0;font-size: 14px;font-family : 'メイリオ',Meiryo,Osaka,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック','MS PGothic',sans-serif;}
+body{width: 100%;margin: 0;padding: 0;background-color: #f7f7f7;position: relative;}
+a{color: #666666;}
+a:hover{color: #CD0000;}
+h1{font-size: 21px;color: #666666;margin: 0px;padding: 0px;border-bottom: 1px solid #CCCCCC;}
+h2{font-size: 16px;color: #666666;margin: 5px;padding: 50px 0 0 0;border-bottom: 1px dotted #CCCCCC;}
+label{transition: all 0.2s;}
+#toggle{display: none;}
+#label_toggle{display: block;width: 100px;text-align: center;padding: 0;border: 2px solid #CD0000;background-color: #FFFFFF;color: #CD0000;border-radius: 15px;position: fixed;top: 10px;right: 10px;z-index: 1005;}
+#label_toggle:hover{background-color:#CD0000;color:#FFFFFF;}
+header{display: block;width: 0px;height: 100%;position: fixed;background-color: #FFFFFF;border-left: 1px solid #CCCCCC;z-index: 2;top: 0;right: 0;overflow-y: auto;overflow-x: hidden;transition: all 0.2s;padding: 50px 0 0 0;box-sizing: border-box;}
+#toggle:checked + header{width: 200px;}
+header label{display: block;width: 180px;margin:0 5px;padding: 5px;border-bottom: 1px dotted #EFEFEF;}
+header label input[type="checkbox"]{margin-right: 5px;}
+label:hover{cursor:pointer;background-color: #EFEFEF;}
+.wrapper{display: block;width: calc(100% - 30px);max-width: 1100px;padding: 30px 15px 100px 15px;margin: 0 AUTO;overflow: hidden;position: relative;background-color: #FFFFFF;}
+/* ログ部分 */
+dl{display: block;margin: 0;padding: 3px;box-sizing: border-box;}
+dl::after{display: block;content: "";clear: both;}
+dt{display: block;font-size: 0.8em;font-weight: bold;float: left;width: 100px;margin: 0;padding: 5px 5px;text-align: right;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+dd{display: block;width: calc(100% - 120px);margin: 0;padding: 2px;float: right;line-height: 1.8em;}
+.zatsudan{width: 95%;margin: 0 0 0 AUTO;background:#f7f7f7;border-left:1px solid #CCCCCC;}
+.other{background-color:#fff7ef;}
+.secret{width: 98%;margin: 0 0 0 AUTO;border-left:3px solid #CCCCCC;}
+.group{background:#f9f9f9;border-left:1px solid #CCCCCC;}
+@media (max-width:480px){
+  dt{display: inline-block;float: none;width: calc(100% - 6px);margin: 0;padding: 3px 0 0 3px;text-align: left;}
+  dd{display: inline-block;width: calc(100% - 6px);padding: 3px;float: none;}
+}
+</style>
+<style>
+.tab_1{background-color:#ebf7ff;border-color:#63b7ff;}
+.tab_1.selected{display: none;}
+.tab_2{background-color:#ffeeec;border-color:#e37f96;}
+.tab_2.selected{display: none;}
+.tab_3{}
+.tab_3.selected{display: none;}
+.tab_4{}
+.tab_4.selected{display: none;}
+
+</style>
+</head>
+<body>
+<label for="toggle" id="label_toggle">表示/非表示</label>
+<input type="checkbox" name="toggle" id="toggle">
+<header>
+<label>▽ 非表示にするタブ</label>
+<label for="main"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="main">メイン</label>
+<label for="zatsudan"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="zatsudan">雑談</label>
+<label for="tab_1"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_1">HO1</label><label for="tab_2"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_2">HO2</label><label for="tab_3"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_3">KP</label><label for="tab_4"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_4">成長</label>
+</header>
+<div class="wrapper">
+<h1>butterflies in our stomach</h1>
+<h2 id="day1">butterflies in our stomach</h2>
+<dl style="color:#888888" class="main tab_0"><dt>KP</dt><dd>【　概要　】<br><br>「野狗子と薬師」継続限定シナリオ<br><br>〇　KPレス2PL / 2PL / タイマン改変可　（KPCどちらでも）<br>〇　プレイ時間　￤　ボイスセッションで3~4h（RPによる）<br>〇　形式 ￤　6版対応<br>〇　ロスト（両HOともに） ￤ 限りなく低<br>〇　舞台 ￤アメリカ<br>〇　導入 ￤二人は＜共通の予定＞があり、待ち合わせをしていた。あるいはHO2の仕事場である院内でたまたま顔を合わせた。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>おはようございます！よろしくお願いいたしますｯｯｯ！！ひさしぶりだ～～～！！ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>おはようございます～🌱<br>よろしくお願いします！ </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>【　秘匿ハンドアウト　】<br><br>■　HO1<br><br>あなたは一か月ほど前、何かしらの任務にあたった。<br>しかし、その任務にあたっていた間の記憶は朧気であり、この任務に関して、組織から何か隠蔽されているように感じる。<br>とはいえ、身体に不調があるわけではなく、記憶の齟齬があるわけでもないため、組織には深く追及していない。<br><br>また、HO2とは近頃忙しく、顔を合わせる機会がなかった。<br>シナリオ当日は、久しぶりに仕事終わりに一緒に出掛ける予定を立てている。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>おはようございます！何も間に合ってなくてすみません泣 </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>【　秘匿ハンドアウト　】<br><br>■　HO2<br><br>あなたは勤務先の病院で以下のような事件が起きていることを知っている。<br>それは『遺体安置室』から遺体が盗まれる、といったようなものだ。<br><br>また、一週間ほど前、あなたの住居に何者かが侵入したような形跡があった。<br>勤務先でも、物の配置などが変わっていることがあり、何者かに侵入されたように思う。<br>しかしどちらも、荒らされていた、と感じるほどの変化ではなく、盗まれたものもない。<br><br>HO1とは近頃忙しく、顔を合わせる機会がなかった。<br>シナリオ当日は、久しぶりに仕事終わりに一緒に出掛ける予定を立てている。 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>ふふ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>わたしも何も間に合ってないので… </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>あ！！　アイコンが…… </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>さて　準備がよろしければ（？）雑談タブで1d100などどうぞ </dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>1d100 気合 (1D100) ＞ 13</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>1D100  (1D100) ＞ 97</dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>これから燃えるぞ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>草 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>秘匿で振っちゃった </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>ぱちぱち…（たき火） </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>1d100 ｳｵー (1D100) ＞ 67</dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>お～！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>いいぞカロちん </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>それでは。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>Call of Cthulhu 6th<br>『butterflies in our stomach』 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>やるぞイ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>導入<br><br>あなたたちは現在、テオの仕事場である病院の廊下を歩いている。場所はアメリカ。このあとは＜共通の予定＞があり、待ち合わせをしていた、あるいはたまたま院内で顔を合わせたため、いまから帰宅するところである。<br> </dd></dl>
+<dl style="color:#888888" class="main tab_0"><dt>KP</dt><dd>★　＜共通の予定＞について<br>　<br>共通の予定は何でもいい。食事を共にする、遊びに出かける、映画を観る……など。<br> </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>では　RPをどうぞ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>え〜！？なんだァ？ふつうにごはん？ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>(´～｀)ﾓｸﾞﾓｸﾞ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ｺﾞﾊｰﾝ行くか </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ｺﾞﾊｰﾝいこう！ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>choice 和 洋 中 (choice 和 洋 中) ＞ 洋</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>おお 定番だ！！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>どっちが店決めたんだ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>アメリカにも洋食って概念あるんだろうか（素朴な疑問） </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>笑った たしかに </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ワロタ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「何頼むか決めてる？」買ったお茶でも渡そう。/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>前世(？)で熊食べてたし何でも食うんだろうな </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>熊行くか </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>健啖家かも </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「あ。ありがとう」受け取った </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>アメリカにおける熊料理<br><br>クマの油で揚げた ビスケット -　ビスケット自体は通常の揚げビスケットだが、揚げる際にクマの油（脂身をバターのように溶かす）で揚げる。 腹持ちがよい。<br><br>クマの ハム の燻製　-　クマを殺した後、通常のハムと同じく下処理をして塩漬けと燻製にする。 珍味の一つだが熟練者が材料に良いクマを選ばないとひどい味になる。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ご機嫌麗しゅう、テオさん… </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>出典不明です </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>クマビスケット！？ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>不明じゃなかった　シートン動物誌だった </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「うーん。最近夜に脂っこいものを食べると胃もたれするんだよね。あんまり体が強くないみたいで」暗にこの体が、という意味 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>ある程度RPが落ち着いたら、なんらかのものごとが起こります。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>はーい！ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ﾇｳ　強くなろう </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「でもステーキハウスの予定だし、せっかくなら肉食べたいな……。サラダ必須か……」うーんうーん/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>勝手にステーキハウスにした </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>おいしそう </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>アメリカで食事といえばステーキハウスのイメージ　なんでだろう（自分が…） </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「歳のせいかも？病院って忙しいよね」他に理由を探してみる。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>やさしい 気を遣われている </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「他の店でもいいし。なんでもいい」/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>やっぱ一人称迷うな </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>choice 僕 私 (choice 僕 私) ＞ 僕</dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「歳って、デリカシーないなあ」ウケた </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「あ、そうやってすぐ何でもいいとか言う。ステーキを食べますよ、予定通り」/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>こっちのが歳なんですけど！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ワロタ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>微々たる差 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「え、普通にほんとの話じゃん。若くはなくない。若いかもしれないけど実際はそこまで若くないっていうか」ああだこうだ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ふつーの人間難しいな どういう感想 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>あーだこーだ言ってて草 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>この感じならケンカできそうで嬉しくなってきた！（すな） </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>是非、しよう！（なす） </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>やった～🍆 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「胃もたれしても知りませんからね。帰りにああこう言われても言ったじゃんって言うから」/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>するぞ！ﾎﾟｶｯ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「はいはい、そうだね。ほんとの話なんだけど、やっぱりデリカシーはない」まだウケてる </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>10:30くらいを目途にものごとを起こします（防災訓練？） </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ちがうんです、ケンカ腰ではないんです 穏やかに言っております </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>おだやか～ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「じゃあ言わないよ、カロの前では。胃もたれしてても」/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>choice 小食 食べる量は普通 結構食う (choice 小食 食べる量は普通 結構食う) ＞ 食べる量は普通</dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>ひとなみ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「く……、ぐ………」全然納得できてない。がこれ以上ああこう言っても大人げないので黙る。 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>でもアメリカ基準なら……意外と食べるのかもしれない…… </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>カロよりSTRがあるし……（小声） </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>そうだった 草 </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>いい感じ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「言わなくても顔見たらわかるので。お気遣い不要です」わかってみせる。/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ワロタ　はっ倒される </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>では、そのように話しながら暫く歩き進んでいると、廊下の一角が騒ぎになっていることが分かる。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>古参ぶってきた かわいい </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>PCたちはともに病院の関係者であるため、《信用》 or 《聞き耳》 などで人々に尋ねる、あるいは様子を見ることができるだろう。/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>choice 少食 普通 ﾓﾘﾓﾘ (choice 少食 普通 ﾓﾘﾓﾘ) ＞ 普通</dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>普通に食べよう </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=65 聞き耳 (1D100&lt;=65) ＞ 86 ＞ 失敗</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>なんでだよ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=71 聞き耳 (1D100&lt;=71) ＞ 29 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>カロは次のような話を耳にする。 </dd></dl>
+<dl style="color:#888888" class="main tab_0"><dt>騒ぎ</dt><dd>「実は……、また遺体安置室から死体が無くなった……って」<br>「これで3件目だそうで。一昨日から1日に1回は起きてて……」<br>「内密に、厳重な警戒が張られていたはずなんですけど、突破されてしまったそうで」<br>「ただ、逃げ出していく犯人の目撃情報があったんです。警備員たちも捜索していて」<br>「もしかしたらまだこの辺りにいるかもしれません」 </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>★　秘匿HO1<br><br>あなたはふと、隣にいるテオを顧みる。彼はここでの長期任務にあたっており、2,3か月はこの病院に滞在すると聞いている。<br> 病院内に潜む犯人を野放しにしておくことは危険だ。近くにいるのであれば、ここは犯人を捜索するべきだろう。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>とんでもない話を聞いてしまったじゃん </dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>はっ倒すぞ！ </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>この話を共有されたら、飛んでくる秘匿があります（事前通知） </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>了解です！！ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「ここの病院で死体が盗まれてるの聞いたことある？また盗まれたみたいで、犯人が近くにいるかもしれない」/ </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>★　秘匿HO2<br><br>　あなたは常々、この連続死体盗難事件について相談を受けていた。あなたはここでの長期任務を命じられており、この事件を放っておくわけにはいかない。犯人が近くにいるというのなら、捕まえた方が今後の院内のためだろう。 </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>以上です </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……それ本当？ いろんな職員から相談されててね。まだしばらくはここで働く予定だし……、犯人はなるべく早く捕まえて解決しておきたい」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「ごめん、先に店に行っててもいいよ」/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「え」テオくんを見る。デリカシー、デリカシーを。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>デリカシー意識しててカワヨ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「力仕事担当なので。死体って重いのにそんなに何度も盗んでるの、複数人かもしれないし」当然犯人確保に協力するよという意味。/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「『え』ってなに。何が言いたいかは分かるけど……。でも、協力してもらおうかな。ありがとう」/ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたたちは犯人を捜すことになった。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>【　犯人追跡ロール　】<br>失敗しても何種類かチャンスがあります<br><br>①まずは《追跡》で判定をどうぞ/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>なくて草 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>初期値は…10 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=10 追跡 (1D100&lt;=10) ＞ 24 ＞ 失敗</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=10 追跡 (1D100&lt;=10) ＞ 52 ＞ 失敗</dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ふふ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたたちは、男の手掛かりを見失ってしまう。かなりの広範囲を捜索したはずだが、皆目見当がつかない。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>そのとき。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>どこから入り込んできたのか、あなたたちの周囲に、蝶がやってくる。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>ひら、ひらと白い雪のように舞い踊るそれらは、あなたたちの肩に触れた。触れた箇所から、冷たさが伝わってくる。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>捕らえようと、あるいは払いのけようとするかもしれないが――、その一拍前に、蝶はふわりと飛び立って、どこかへ向かっていく。<br><br>ひら、ひら。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>日の暮れかけた真っ白な廊下のなか、灯火のような白光の蝶がとんでいく。<br><br>それは、あなたたちに行くべき道を示しているかのように思えた。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>蝶を追いかけていくのであれば、あなたたちは、見失ってしまった男の居場所を再度探ることができる。<br><br>➁《目星-20》で判定をどうぞ/<br> </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=65-20 目星 (1D100&lt;=45) ＞ 33 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>※KP情報：<br>どの段階で成功したかによって、次のイベントにおける薬服用のPOW係数が変化する。<br><br>➁の段階で成功した場合、《POW*3》 </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>えらいのだ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=95-20 目星 (1D100&lt;=75) ＞ 1 ＞ 決定的成功/スペシャル</dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>え？！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>すごすぎ </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>えらすぎるだろ！ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>見つけたぜ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>1クリ…！？ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>1クリかっこよすぎ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>まかセロリ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あとでちょっといいことがあるのと、この場でクリチケを手に入れるの、どっちがいいですか？ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>いいことがあるとHAPPYです！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>は～い！ </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>ではPOW係数を4にしよう　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたたちが、手掛かりを探して院内を歩き回っていれば、黒い人影を廊下の奥で目撃する。男は楽器のケースのような大きな荷物を抱え込んでおり、ちょうど角を曲がるところだった。<br><br>明らかに不審人物である。<br><br>カロはいちはやく気づいて駆け出すことができる。/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ﾎﾜｰ！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>かっこよすぎかい </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「！」気付いた </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>1クリだし次の技能も自動成功にしちゃお<br>デフォルトの描写がいい感じかも </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「！」ダッシュ！/ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたたちが彼を追って走りだせば、足音に気が付いたらしい男は、逃げるように部屋のなかに入り込んでいく。<br><br>廊下には無数に扉が存在するが、カロは男が入った部屋を特定することができる。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>一般的に患者や看護師が立ち入ることのない、『研究室』だ。/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>はえ～ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「入ったことある？」ドアの前に。/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「け……、研究室に？」ｾﾞｴ…ﾊｱ… </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>ありますか…！？ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ごめん置いていってたわ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ありそうだけどどうなんだ（確認中でございます） </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>はーい！ </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>あんまり……ないかも　普段からよく入る場所ではない　感じです </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>職場内ではあるけど、他人の領域って感じの…… </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>了解です✊ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「いや……特に用事のない部屋だから……初日に……場所だけ案内された……」息整え……/ </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>把握が上手すぎる…… </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「わかった。開けるね」整うまで待とうかと迷ったけど窓から逃げられたら困るので入ろう。/ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>扉を開ければ、薄暗く、薬品の匂いが充満した部屋があなたたちを出迎える。<br><br>そして、その中央にガスマスクを被った男が一人立っていた。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>男はあなたたちが自分を追いかけてきていることを認めると、懐に手を入れ何かを取り出そうとする。男が何かをしでかす前に、無力化する必要があるだろう。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>▶　戦闘開始 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>やべえ！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>草 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>1R </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>どっちもHP10しかないの笑うんだけど </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>男は懐から何かを取り出すと、その蓋を取り上げた。<br>それは薬瓶のようななにかだ。<br>あなたたちは咄嗟に警戒するだろうが、それ以上のことは何もない。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>合わせたら20もあるから！！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>カロの手番/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ｽﾞｺｰｯ　なんなんだ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>拳銃って持ってますか？ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>アメリカだから撃てるの最高だな </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>もって……　ない </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>置いてきちゃった </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>持ってなかった・・・ </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>ごめん　あとで出てくるから </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>家に……（家に！？） </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>いつも拳銃いれてるとこ触る。今は持ってない！ガーン。 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>家ではないと思うんですが、すぐには取りに行けない場所にあると思ってください。 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=63 頭突き (1D100&lt;=63) ＞ 50 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>頭突きやばい </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>はーい！ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ｺﾞﾁﾝ！！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>石頭！？ </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>s1d100 確定で回避 (1D100) ＞ 15</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>常人ではとても目で捉えきれないだろうカロの攻撃を、男は咄嗟に椅子を蹴り飛ばして、避けてみせた。それは、あなたのことを知っているかのようだった。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>テオの手番/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>えええ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>誰よ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=50 こぶし (1D100&lt;=50) ＞ 42 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>s1d100 確定で回避 (1D100) ＞ 67</dd></dl>
+<dl style="color:#ff9888" class="group tab_4"><dt>テオ</dt><dd>1d10 こぶし初期値 (1D10) ＞ 8</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたの攻撃も、男は避けきってみせた。<br>カロほどではないが、ある程度、男には体術の心得があるのかもしれない。<br> </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>つよいよ～～ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>ここで二人とも《人類学》 or 《生物学》の判定が可能。（手番を消費しない） </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>こぶしが強くなってる </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=7 生物学 (1D100&lt;=7) ＞ 92 ＞ 失敗</dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=60 生物学 (1D100&lt;=60) ＞ 65 ＞ 失敗</dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>テオ元復活なるか </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>★　秘匿　HO1<br><br>＜POW*4＞を判定する。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>なんでだよ！！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>人類学も…どうぞ　初期値1です </dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>CCB&lt;=10*4 POW×4 (1D100&lt;=40) ＞ 10 ＞ 成功</dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>これこわすぎる </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>え、えら～！？ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=1 人類学 (1D100&lt;=1) ＞ 94 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>男が薬瓶を持ち出してからというもの、頭がくらくらする。視界がぶれて、周囲の音が遠ざかっていく。しかしどうにか、あなたはその場に立っていることができるだろう。 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=1 人類学 (1D100&lt;=1) ＞ 96 ＞ 致命的失敗</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>しぬ </dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>ふうふう </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>ごめん </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>なつかしいよこの感じ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>これからいっぱいクリティカルしよう </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>そのファンブル……戦闘終了後に処理します　もう終わるので </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>男はこれ以上時間をかけることを良しとしなかったのか、その場に、手に持っていた薬瓶を叩きつけた。そして、あなた達が怯んだ隙に、部屋から逃げ出していく。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>応⚔ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>《薬学》 or 《アイデア》　で判定/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=85 薬学 (1D100&lt;=85) ＞ 100 ＞ 致命的失敗</dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>あれ？ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>おかしくないか？ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=60 アイデア (1D100&lt;=60) ＞ 67 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>アイデアもどうぞ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=70 アイデア (1D100&lt;=70) ＞ 89 ＞ 失敗</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>むり </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=1 薬学 (1D100&lt;=1) ＞ 12 ＞ 失敗</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>しぬど </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>おなかすいてたかも </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>彼自身がガスマスクを身につけていたことを考えると、この薬品って……。<br><br>テオは背筋が冷えるかもしれない。SAN-1 </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>★　秘匿　HO1<br><br>薬品とは距離があった。吸引するにしても最低限で済んだはずだ。<br>にもかかわらず、あなたは眼前に薬を押し付けられたかのように、強い刺激を感じる。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ テオ ] SAN : 65 → 64 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>カロ。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたはその薬に対し、どこか懐かしさを覚える。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>少しの懐かしさと、痛烈な欲。それが欲しいと本能が叫び出すような、飢え乾く欲。気がつくと、あなたはその薬品を、一滴残さず舐めとろうとしていた。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>え❓怖い </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>まずいにゃ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>更に、「もっと」「もっと」と乞い願うように周囲を見渡す。<br> </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>──見つけた。<br><br>その匂いの最も強い場所を。いや、人を。<br>すぐ側に、同じ匂いがある </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>何が起こっている❓ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>あわ　あわ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>まだステーキハウスじゃないよ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>自分、食肉じゃありません！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>ここで、カロは＜POW*3＞の判定をどうぞ。（F処理込みの係数） </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>がんばえ～！ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=10*3 POW×3 (1D100&lt;=30) ＞ 40 ＞ 失敗</dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>あわわ… </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>クリファンを自分で相殺してる　自力救済（？） </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>惜しい;; </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>ごくり。あなたの喉元が鳴った。<br>どうして抑える必要があるだろう。<br>欲を。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>目の前にいるテオを、舐めて、飲んで、味わって、味わいつくしてしまいたいという――欲を。あなたはテオに対して、襲い掛かってしまう。<br><br>フレーバーでRPを行ってもいい。<br>落ち着いたら、カロはSANc 1/1d3。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ド級の汗 ド汗 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>野狗子…… </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>諸々落ち着いたら、何事もなかったかのように改めて薬品を調べてもらう流れになります。（事前通知） </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>草　了解でございます </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ワロタ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>はひい </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>先にSANcしてもいいし　やりやすいように…どうぞ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>テオくんの手首に噛みつくか……。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>襲っていいです　もちろん俺は抵抗するで、拳で </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>1D100&lt;=80 正気度ロール (1D100&lt;=80) ＞ 85 ＞ 失敗</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>1d3 (1D3) ＞ 3</dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ カロ・ホースマン ] SAN : 80 → 77 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>かっこよすぎる　さすがだぜ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>20代後半……（編集済） </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>拳で </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>デリケートな問題ですよ！！！！！ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>ずっと噛んでます（泣）肉ないけど出汁を期待して……（泣）/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>草 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>テオは幸運をどうぞ　失敗したらHPに影響する程度の怪我になります（成功したらダメージなし） </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>choice 痛いし殴る 殴るのはちょっとな…と思いつつ殴る 遠慮なく殴る 殴らない…… (choice 痛いし殴る 殴るのはちょっとな…と思いつつ殴る 遠慮なく殴る 殴らない……) ＞ 遠慮なく殴る</dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=65 幸運 (1D100&lt;=65) ＞ 11 ＞ スペシャル</dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ワロタ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>強すぎる </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>丈夫でしょうということで… </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>牙のない口で噛みつかれても、大して痛くはない。と感じるかもしれない。 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>遠慮ない　うれしい </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ｶﾞﾐｶﾞﾐｶﾞﾐｶﾞﾐ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「ちょ、痛いから」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>殴ります。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>こぶしで判定をどうぞ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=58 こぶし (1D100&lt;=58) ＞ 51 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>カロは回避してもいい </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>避けられる！ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=61 回避 (1D100&lt;=61) ＞ 53 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ク </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>咄嗟に反応して避けることができる。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>避けたときに噛むのやめたか…？ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>やめてそう </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>テオさんのこぶし成功してるのじわじわくるな…… </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>初期値だったらギリ失敗している値だから　成長を……したんだ感があって </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>たしかに…… </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ジャブじゃなくてちゃんと当てにいったんだな…ともなる </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>避けて距離ができたので混乱しながらじっと見てる。/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>殴っていいという信頼かもだし！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……大丈夫？ お腹空いたの？」距離を取られたので、こちらもじっとしてる。/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>それはある！ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「あれのせいで頭がぐらぐらして」薬瓶の残骸を指差す。 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「おかしいな」自分の爪確認する。/ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>爪…ちゃんと切ってる（？） </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>さぼってたら…伸びてて長いかもしれませんね　多少 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>choice サボりがち ちゃんと切った (choice サボりがち ちゃんと切った) ＞ ちゃんと切った</dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……薬を調べよう。ガスマスクをしていたから、揮発性の毒薬なんじゃないかと思ってたんだけど……」そう単純なものでもなさそう/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ヨシヨシ　爪を大事に </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>こまめだ… </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>えらい </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたたちは、残された手がかりから薬品の調査を行う。<br><br>《薬学》 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=85 薬学 (1D100&lt;=85) ＞ 71 ＞ 成功</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=1 薬学 (1D100&lt;=1) ＞ 98 ＞ 致命的失敗</dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ヤバい </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>… </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>調子悪い泣 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ｳｵｵ　ｳｵ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>テオはおおまかに、薬の成分について調べることができる。<br>あなたは薬品において、かなりの知識量を有しているだろう。<br>けれど、そんなあなたにも分析することのできない、未知の成分が含まれている。<br>一体これはどこから入手され、どのように製造されたものなのだろうか。<br>SANc 0/1 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>カロは……上記の話を聞いた場合、なにそれ怖……と思うだろう。SAN減少1が発生する。/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>1D100&lt;=64 正気度ロール (1D100&lt;=64) ＞ 35 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>ビビる </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>こわいねえ </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ カロ・ホースマン ] SAN : 77 → 76 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>また、服用したカロの様子を見る　こともできる。<br>《医学》 or 《薬学》で判定が可能。 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=80 医学 (1D100&lt;=80) ＞ 22 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>先ほどは興奮状態にあったようだが、今は落ち着いている。<br>あなたが診察してみても、特別服毒した兆候などは見られないように思う。/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>薬品については説明した。怖……。 </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>ここで、HO1の「恐怖」は一度喪失することになる。<br><br>HO1が心配かもしれないが、HO2はこの死体盗難事件を解決する必要があること、HO1はそんなHO2を一人にはできないことなどを顧みて、犯人捜しをしてもらうことになる。 </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>yabe </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>やべ </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>怖…と思わせちゃったよ </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>薬品について不可解さを覚えたものの、不思議と身に迫る恐怖としては捉えられなかった。 </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>という意味での「何それ…怖…」です（補足） </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>ふう… </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……今は落ち着いているように見える。症状は一時的なものみたいだけど、今後一切現れないとも限らないと思う。薬品がどういうものなのか全く分からないから」診察したよ/ </dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>こわ… </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>それはそうと、男はまだ遠くには行っていないはずだ。<br>予定の時間を少し遅らせることにはなってしまうだろうが、院内を見回していったほうがいいかもしれない。 </dd></dl>
+<dl style="color:#888888" class="main tab_5"><dt>KP</dt><dd>探索箇所<br>［　研究室　/　事務室　/　アーカイブ室　/　処置室　］ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>右端のタブに「探索箇所」を提示しました。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ありがとうございます！ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「ありがと。困る……」自分の服でテオくんの手首拭いておく。 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>現在地は研究室です </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「大きい荷物を持ってたしまだ近くにいるかもしれない。病院の中を回ってみてもいい？」/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>○ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>はーい！ありがとうございます！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「うん。僕としても犯人は捕まえておきたいから」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>せっかくなので、研究室から調べたいです！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>現在あなたたちのいる部屋だ。男の逃げ込んだ部屋であり、あなたたちが乱闘になったことで多少荒れている。<br><br>判定可能技能：<br>《目星》　/　《アイデア》 / 《薬学》or《目星》  <br>※３つとも別情報 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=65 目星 (1D100&lt;=65) ＞ 14 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=70 アイデア (1D100&lt;=70) ＞ 45 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=80 医学 (1D100&lt;=80) ＞ 69 ＞ 成功</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=95 目星 (1D100&lt;=95) ＞ 28 ＞ 成功</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=60 アイデア (1D100&lt;=60) ＞ 64 ＞ 失敗</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=95 目星 (1D100&lt;=95) ＞ 91 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>テオさんの３つ目は医学ではなく薬学ですね…！振り直しどうぞ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>あ！失礼いたしました！！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=85 薬学 (1D100&lt;=85) ＞ 38 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>◎ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>１つめの《目星》の成功情報から。<br><br>＞　白いなにかが落ちている。拾い上げて見ることができる。<br> </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>＜1d100＞を判定すること。 </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>＜1d100＞を判定すること。 </dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>1d100 (1D100) ＞ 10</dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「？」拾った </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>1D100  (1D100) ＞ 87</dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>それは、白い蝶の羽のようにも、あるいは一片の花びらのようにも、雪のようにも思えた。しかしそのいずれにも該当しないようにも思える。あの男が落としていったものだろうか。 </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>白い蝶の羽のように思えた。しかし、どういった種類の蝶なのか、断定はできない。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>描写は秘匿にて送りました。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>なんだ～！？ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>《アイデア》成功情報<br><br>＞　この『研究室』に入室できる人間は限られている。ここに逃げ込んだことを考えると、犯人は医療関係者なのかもしれない。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>《薬学》 or 《目星》成功情報<br><br>＞　床に鞄が落ちていることに気が付く。鞄の中には、1キロ程度の「鉄粉」「酸素ガス」「海水」などが収められていた。ラベルには『XX病院』と記載されているため、おそらく犯人が病院の研究室から盗み出そうとしたものではないか、と見当づけられるだろう。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>アイデアテオだけわかるのなんか納得 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>鞄の中身について、《化学》 or 《薬学-20》 or 《知識-20》で判定が可能。 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>わかる～ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=85-20 薬学 (1D100&lt;=65) ＞ 80 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>全て振っても…◎ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>たすかります泣 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=65-20 知識 (1D100&lt;=45) ＞ 5 ＞ 決定的成功/スペシャル</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>カッ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>ええ？ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>か～っこいい </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>いいですね…… </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>鉄と酸素は発熱反応を起こす。また、海水で湿らせた鉄粉が空気に触れると、より短時間で高温になる。これらを持ち去って、何をしようとしていたのかは定かではないが、放置しておくと犯人が回収する可能性もあるため、携帯しておいた方が安全だろう。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>テオはクリチケ+1 </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ テオ ] 🎫 : 0 → 1 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>研究室は以上 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ありがとうございます！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「ここ、普段なら関係者以外は入室できないんだ。だから、犯人も限られてくると思う」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「これを持ち出して何をしようとしていたんだろう……」化学反応について説明して回収。/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「高温に？ほんとに何しようとしてたんだろ」テオくんがわからないなら自分はもっとわかんないな。 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「さっきテオが拾ってた白いやつもなんだろう。落としていったやつだと思うんだけど」/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「蝶の羽みたいだ。種類までは分からない」見せた/ </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>上記の描写のように見える。 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「蝶の羽。うーん……」違うようなきがする。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ちがうんだ！？ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「わかんないな。他のところも回ってみよう。どこなら身を隠せそう？」/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ちがうらしい </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>はえ～ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「院内広いからなあ。アーカイブ室とか……？」/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「逃げるだけならまだいいんだけど。アーカイブ室に行こう」案内待ち。/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>案内するぞ！アーカイブ室へ。/ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>■　アーカイブ室<br><br>病院に関する資料や記録を保存しておくための部屋だ。あなたたちは病院関係者であるため、警備員や受付も会釈するのみで特に止められることもない。<br><br>判定可能技能：<br>①《目星》or《図書館》 /② 《アイデア》or《目星》　/　③《図書館》or《コンピューター》　※３つとも別情報 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=70 図書館 (1D100&lt;=70) ＞ 9 ＞ スペシャル</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=95 目星 (1D100&lt;=95) ＞ 93 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=70 アイデア (1D100&lt;=70) ＞ 39 ＞ 成功</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=60 アイデア (1D100&lt;=60) ＞ 64 ＞ 失敗</dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=70 図書館 (1D100&lt;=70) ＞ 38 ＞ 成功</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=25 図書館 (1D100&lt;=25) ＞ 77 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>①《目星》or《図書館》成功情報<br><br>＞　誰かが置き忘れたらしい、いつかの新聞が目に留まる。 </dd></dl>
+<dl style="color:#888888" class="main tab_0"><dt>▼新聞のコラム ｜ 死者の日と蝶</dt><dd>今日はメキシコでは「死者の日（ディア・デ・ロス・ムエルトス）」です。死者の日は、亡くなった人々の魂が家族のもとを訪れると信じられています。<br><br>特にメキシコではこの季節、蝶が大量に飛来するため、死者の日の象徴となっています。蝶に死者の魂が宿るというのは、メキシコ以外でも、日本・中国の伝承やギリシャ神話でも知られています。<br><br>あなたのそばで舞う蝶も、もしかしたら身近な人の魂が宿されているのかもしれません。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>②《アイデア》or《目星》成功情報<br><br>＞　テオが記録の保管されているパソコンを操作すれば、とある記事が開かれたままになっているのを発見する。 </dd></dl>
+<dl style="color:#888888" class="main tab_0"><dt>▼開かれたままのニュース記事</dt><dd>特効薬が存在しない不治の病である難病、△△病患者であるAさんが死亡した。<br><br>Aさんには、身体への有害性を完全には否定できない試薬を投与するか、しないかという選択が残されていた。<br><br>Aさん自身は投与を望んでいたそうだが、最後まで家族が同意せず、結果的に試薬が投与されることはなかった。担当医は「重篤な副作用が発症する可能性は1%程度だった。薬は投与されるべきだった」と話していたという。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>ニュース記事に関して、さらに《目星》 or 《知識》が可能。 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>ニュース記事を共有した。 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=65 目星 (1D100&lt;=65) ＞ 74 ＞ 失敗</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=95 目星 (1D100&lt;=95) ＞ 40 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>テオは知識も振ってもいいかも </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=65 知識 (1D100&lt;=65) ＞ 64 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>この患者Aが入院していた病院が、あなたたちが現在いる病院と同じ病院だと分かる。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>③《図書館》or《コンピューター》成功/失敗描写<br><br>成功　＞　テオは最近編集された記録のある資料を発見する。<br><br>失敗　＞　犯人に関する手掛かりが残されているかもしれない。そう思い、カロも資料を探す。しかし、資料を探すのに、時間がかかってしまう。目が滑っていく。気の滅入るような言葉たちの上で。SANc 1/1d2 </dd></dl>
+<dl style="color:#888888" class="main tab_0"><dt>▼記録</dt><dd>-------------------------<br>▼1年前の記録<br>-------------------------　<br><br>✕✕ /▽▽/〇〇（今から1年ほど前の日付）<br><br>当院は［　アクセス権限がありません　］による心的外傷後ストレス障害を発症した元従軍患者の受け入れを行った。この日、約100名の軍人が診療を受けるために搬送され、その多くが戦場での過酷な経験に起因する深刻な精神的ストレスを抱えていた。<br><br>彼らに対し適切に対処するため、当院では臨時の診療スペースを設けるとともに、精神科医、心理カウンセラー、看護師などの専門家を擁するチームを編成した。チームの代表者であり、担当医でもあるのは【　　】。<br><br>---<br><br>空白部分は何者かによって削除されており、空欄になっている。また、この記録は一か月ほど前に追記がされていたようだ。<br><br>-------------------------<br>▼1か月前の記録<br>-------------------------　<br><br>▼▼ /✕✕/〇〇（今から1か月ほど前の日付）<br><br>✕✕ /▽▽/〇〇（今から1年ほど前の日付）に当院が受け入れをした軍人患者に関するその後の報告。<br><br>受け入れ当初、約100名の軍人が当院に搬送され、専門家チームによる総合的な治療とケアが提供されていた。<br>その後順調に快復しているものとの報告を受けていたが、患者たちの一部において、薬剤の投与量が適切でなかったことから、受け入れた患者のうち12名が自ら命を絶つことになった。<br><br>原因には、投与量の確認不足、および不十分な診察と患者とのコミュニケーションが考えられている。<br>院内および第三者委員会の調査報告によれば医療過誤に該当されないものと決定づけられており、担当医である【　　】への処分は厳重注意と投薬研修に留まった。<br><br><br>-------------------------<br>▼文書の編集記録<br>-------------------------　<br>・1年前　｜　患者受け入れ報告<br>↓<br>・1か月前　｜　患者の自死記録<br>↓<br>・数日前　｜　記録内の部分削除 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>記録を読み終えたら教えてください🌱 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>1D100&lt;=76 正気度ロール (1D100&lt;=76) ＞ 13 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ カロ・ホースマン ] SAN : 76 → 75 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>よみました！やべ～ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>読みました！ホゲ～ </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>★　秘匿　HO1<br><br>ばく、ばく。と心臓が拍動している。全身が心臓になってしまったかのように。<br>ばく。ばく。何度も。何度も。<br><br>脱力したような男たちの体は、まるで安らかに眠っているかのようだ。あなたはそれを確認した。それがあなたの仕事だった。眠っているだけなのか。そうじゃないのか。<br>――はっと意識を取り戻す。<br><br>激しい鼓動も、手先が冷たくなるような感覚も、すべて遠のいていた。あなたは今、どちらかといえば快だと判断を下すほど、心が落ち着いている。<br><br>｜PL向け情報<br>・あなたは何か（思い出しかけると心臓が鼓動を早めるようなこと）を失念しているが、そのことに対して気になっていない。<br>・今の心情は落ち着いており、凪のように穏やかである。 </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>★　秘匿　HO2<br><br>あなたは思い出す。この病院に赴任される前、たしかにあなたもこの話を聞いたことがあった。<br><br>この患者たちの治療にあたっていた医師は『悪夢をみるから薬を増やしてくれ』と懇願され、薬を増やすことによる依存症を始めとしたリスクを鑑みて「もう少し様子を見よう」と話したそうだ。<br>結果として、悪夢に魘された患者たちは、それに耐えられずに集団自殺をはかったという。<br><br>この担当医は、患者たちの精神は多少の浮沈はあれども、快復に向かっていると感じており、週末には患者たちとともに映画を観る予定すら立てていたそうだ。<br><br>彼が『担当していた患者が集団自殺をはかった』と連絡を受けたのは、結局誰も待合せに来ず、たったひとりで映画を観たあとだったと言われている。<br><br>担当医の名前は『コール・リリーフ』。 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>はーい！　アーカイブ室は以上です </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>そしてここでセーブにしようかな！　お昼だ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>はーい！！すごいことになっている。 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>わやわや　再開は13時で大丈夫でしょうか </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>こわい… </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ﾊｲ！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>大丈夫です！！ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>あいよっ　それではまた </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ドゥルン 午後もお願いいたします♪ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>オホホ よろしくお願いします💥 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>ぬるぬる </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>よろしくお願いします </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>研究室、アーカイブ室の探索が終わったところからです。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>はーい！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「カロ。この資料なんだけど……」最近編集された記録のある資料を共有 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「うん」見る。 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「100人も運ばれたんだ。何があったんだろう」/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「何があったのかは僕にも分からない。でもこの話はここに赴任する前に聞いたことがある。不自然に消されているけど、担当医の名前は『コール・リリーフ』だ」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「『悪夢をみるから薬を増やしてくれ』と患者に懇願されていたが、投薬量を増やすリスクを鑑みて、しばらく現状のままで少し様子を見ていたらしい。ただ……患者たちは病状に耐えられずに集団自殺を起こしてしまったと」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「コールが様子を見ることにしたのは、現状のままでも患者たちは快復に向かっていると感じていたから。週末に患者たちと映画を観る予定を立てられるくらいにはね」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「僕が知っているのはこれくらいだ。……なぜ編集されていたんだろうね」/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「何を見て回復に向かっていると感じたんだろう。よくわらないね」 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「ここはもう気になるようなものはない？」自分じゃ判断できないので。/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「うん、そうだね。犯人の姿も見当たらないし……」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「あと、身を隠せそうなところ……事務室とかかな……」/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「行こう」向かいます。/ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>■　事務室<br><br>誰かの忘れ物が置かれている。どうやらコメディ映画のパンフレットのようだ。 </dd></dl>
+<dl style="color:#888888" class="main tab_0"><dt>▼映画『butterflies in my stomach』のパンフレット</dt><dd>その日は、交際している彼女の両親に挨拶に行く日だった。<br><br>主人公はずっと緊張しており、さながら胃の中で蝶が羽ばたいているかのような心持ちでいた。あまりに緊張しているために『このままでは挨拶がうまくいくはずがない。彼女の両親に嫌われてしまう！』と考えた。<br><br>そして、たまたまネットで見かけた緊張を消すおまじないを試すことにする。すると、主人公の緊張はたちまちに消え失せ、普段通り、あるいはそれ以上にリラックスした状態になった。『これはいい』と考えた彼は、そのまま彼女の家へと挨拶へ向かう。<br><br>挨拶は順調だった。気さくで話し上手、すっかり落ち着いた様子の彼に、両親のみならず彼女も惚れ直すほど魅力的に感じていた。<br><br>しかし、彼女の母親が放った一言への返答により、その場は凍り付くことになる。<br><br>「あなたはとっても素敵な人ね。娘と年も変わらないのに、どうしてそんなに落ち着いているの？」<br>「ええ。だって、こんなの大したことじゃありませんから」<br><br>『緊張するようなことじゃない』というニュアンスを伝えたかったはずの彼の口は、“あまりに緊張感がない”ために、そう言葉を紡いだ。<br><br>結局、その日は散々な結末を迎え、主人公は破局の危機を迎えることになる。緊張を消すおまじないの効果は24時間しか続かないようで、再び緊張感を取り戻した主人公は、緊張しすぎて呂律も回らないままに、情けなく彼女にプロポーズしなおした。<br><br>「あなたのそういうところが好き（I love that about you.）」<br><br>恋人の言葉によって、映画は締めくくられる。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>パンフレットに《目星》 or 《アイデア》が振れる。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>映画のなまえなの </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>はえ～～～ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=65 目星 (1D100&lt;=65) ＞ 67 ＞ 失敗</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>出目悪すぎる </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=95 目星 (1D100&lt;=95) ＞ 82 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>映画のチケットの半券が13枚挟まれており、その内視聴したことを意味するスタンプが押されているのは1枚のみだった。日付はおよそ一か月前だ。 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>事務室は以上です </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>はーい！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ああ～～ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「映画のチケットがある。いち、に、さん……、13枚だ。1枚しか使われてない」共有。/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「これ……1か月前の日付だ。……『担当患者たちが集団自殺をはかった』とコールが連絡を受けたのは、結局誰も待合せに来ず、たったひとりで映画を観たあとだったと聞いた」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「使われた半券は1枚だけのようだし、そのときのものかもしれない」/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「ああ、そうなんだ。誰もこなかったの疑問に思わなかったのかな」/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「どうだろう。残念な気持ちだったとは思うけどね」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「うーん。ここにもいないなら……、処置室……？ 犯人が関係者だと仮定するなら出入りできるはずだし」/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「行ってみよう」/ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>■　処置室<br><br>中に入って行けば、整頓された処置室が視界に広がる。背表紙の揃った戸棚や、広い机の上にはいくらかの本が置かれていた。また、机の下に鍵のかかった金庫が置かれていることに気が付く。<br><br>判定可能技能：<br>本に対して《目星》 or 《図書館》 / 金庫を調べる </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>本から見ます！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=70 図書館 (1D100&lt;=70) ＞ 66 ＞ 成功</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=25 図書館 (1D100&lt;=25) ＞ 12 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>戸棚や机の上を探せば、あまり医術に関係のない本が何冊か収められている。それらには、特段奇妙な点はないが、特定の単語に印がつけられ、数字が書き込まれていた。 </dd></dl>
+<dl style="color:#888888" class="main tab_0"><dt>▼本のなかの印と数字</dt><dd>印のつけられた箇所「Let's talk “about” our plans for the weekend.」<br>数字 &gt; 1<br><br>印のつけられた箇所「I saw beautiful “butterflies” in the garden.」<br>数字 &gt; 1<br><br>印のつけられた箇所「I have a pain in  “my stomach”.」<br>数字 &gt; 1<br><br>印のつけられた箇所「“I” enjoy reading books in my free time.」<br>数字 &gt;  0<br><br>印のつけられた箇所「There is a book “in” my bag.」<br>数字 &gt; 9<br><br>印のつけられた箇所「I “love” the way the sun sets over the ocean.」<br>数字 &gt; 0<br><br>印のつけられた箇所「“You” always know how to make me smile.」<br>数字 &gt; 8<br><br>印のつけられた箇所「“That” is the best movie I have ever seen.」<br>数字 &gt; 7 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>初期値成功だ　えらい </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>カロの図書館　1d10 即時成長どうぞ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ﾔｯﾋﾟｰ！ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>本は以上です </dd></dl>
+<dl style="color:#88b5d3" class="group tab_4"><dt>カロ・ホースマン</dt><dd>1d10 図書館初期値 (1D10) ＞ 5</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>◎ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>なぜ関係のない本が？ 疑問に思いつつ金庫を見ます。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>8ケタのダイヤルによって施錠されている。<br>現在すべての数字は「0」に合わされている。<br><br>［0］［0］［0］［0］［0］［0］［0］［0］ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「施錠されてるね。当然だけど」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……さっきの映画のパンフレットと関係あるかな？」 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>butterflies in my stomach<br>1　　　　9　　1<br>I love that about you<br>0　0　7　1　　8 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ありがT </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「19100718……」ダイヤルを合わせてみる。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>ロックが解除される。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>開いた！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>金庫を開ければ、冊子状になっている資料を発見する。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>お！！ </dd></dl>
+<dl style="color:#888888" class="main tab_0"><dt>▼冊子 01｜新薬について</dt><dd>備考：<br>この新薬は、精神疾患に対する治療薬として開発された。<br>臨床試験は行っておらず、安全性に関しては未知数である。<br><br>効果：<br>生活や行動の妨げとなる感情の抑制。<br>最終的には人間の感情自体をコントロールすることを目的としている。<br><br>主成分：<br>新発見された強酸性の血液に似た液体。<br>強い有毒性と強酸性があるが、一方で、生成された感情の消去を促進する働きもある。<br>条件づけの強化と感情の消去補助という点で、糖質コルチコイドに似ている。<br>この液体は、研究を進めていく過程で、さらに人々にとって生活を豊かにすることができるかもしれない。<br>その前段階として、リチウム、バルプロ酸、カルバマゼピンなどと調合し、安定した供給を図る。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>冊子01 の内容について《薬学》が振れる </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=85 薬学 (1D100&lt;=85) ＞ 6 ＞ スペシャル</dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>さっすが！！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ﾌｳ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>リチウム、バルプロ酸、カルバマゼピンといえば、気分安定薬に含まれることの多い薬である。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>冊子はもう一冊ある。 </dd></dl>
+<dl style="color:#888888" class="main tab_0"><dt>▼冊子 02｜誰かの手記</dt><dd>赴任してきたばかりだという医師から、カロ・ホースマンに関するカルテを共有された。彼を患者として引き継ぐ話は聞いていなかったため、きちんと手続きを踏まえたのか尋ねようとした時、彼の姿はもうどこにもなかった。<br><br>私の手元には彼のカルテだけがあった。確認をすべきだとわかっていたが、私はそこに記された文字列に目を奪われていた。壮絶な経歴の数々。そして精神疾患の既往症。きっととても、辛い思いをしてきたのだろう。彼こそ、新薬を投与するに相応しい。<br>もう二度と、同じ轍を踏まないために。<br><br>（以下カロの情報が掲載されていた気配があるが、白く塗りつぶされており、読み取ることはできない） </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>冊子02 を読んだPCは　SANc 0/1d2<br> </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>カロ！？ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>1D100&lt;=64 正気度ロール (1D100&lt;=64) ＞ 73 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>YES </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>1d2 (1D2) ＞ 2</dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ドキンちゃん </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ テオ ] SAN : 64 → 62 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ひえ～ん </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……」見せるか悩むが、見せないのもな </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……これ、カロのことが書いてある」冊子1と2共有/ </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>★ 秘匿　HO1<br><br>なぜここに、仔細な自分の情報が掲載されているのか。秘密組織に所属する自分の情報は、組織の存在と同様トップシークレットのはずだ。<br><br>どこまで知られているのか。目的は何なのか。あなたの思考は通常、決壊したダムのように溢れ出していくはずだった。<br><br>しかし、不思議と心持ちは落ち着いており、冷静な自分がいる。<br><br>《アイデア》 </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>★ 秘匿　HO2<br><br>《アイデア-20》 or 《精神分析》 </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>CCB&lt;=70-20 アイデア (1D100&lt;=50) ＞ 46 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>カロの情報は、他の患者とは違う。彼の負っている責任、そして任務から鑑みても、そう簡単に漏洩するようなものではない。それこそ、流出させようという意図がなければ、暴くことのできないトップシークレットだ。<br><br>あなたはそこに、何かしらの思惑のようなものを感じ取ってしまう。<br>SANc 0/1 </dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>CCB&lt;=60 アイデア (1D100&lt;=60) ＞ 83 ＞ 失敗</dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>1D100&lt;=62 正気度ロール (1D100&lt;=62) ＞ 93 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ テオ ] SAN : 62 → 61 </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>自分が今疑問に思っていることは、犯人を見つけ出し、聞き出せば全て解決する。悩むだけ時間の無駄だろう。 </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>あなたはきっと、そばに立つカロの様子を窺うだろう。しかし、あなたの予想に反して、存外彼は平然としていた。 </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>何に狙われてるんだ、カロちん。 </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>平然としていてえらいと言うべきなのか……？ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>処置室は以上　部屋を出ると…ものごとがおこります </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「え？なんで？」見る。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>うわー！ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「心当たりがないな。犯人が知らないかな」/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……君の情報は重大な機密事項だから、簡単に流出するようなものじゃない。誰かが意図的にそうしない限り」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……カロ、また危ないことに巻き込まれてるの？」呆れ？心配？複雑。/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「だよね。組織が関係しているのかな」冷静。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ク…… </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>ぽよぽよ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「そういえば、1ヶ月前の任務の記憶があんまりないんだ。なにか不都合があったわけでもないから特に気にしていなかったけど、関係あるのかもしれない」/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「1か月前の記憶が？ ……悪い夢を見たりは？ ない？」/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>記憶ないの！大変じゃん </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>本当にそう </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「どうだろう？心当たりはないから見てても起きて忘れたりしてるかも？でも犯人に聞き出せば全部解決するんじゃないかな」/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>大変らしい </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「あっさりしてるなあ。自分のことなのに……」 </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>ほよよ…… </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「君のそういうところをどう捉えればいいのか分からないよ。僕は心配してるのに。君が安らかであってほしいと思ってるのに」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「口うるさいことを言ってごめん。無駄な老婆心だったかも。君が立場上危険を避けられないことは理解してるんだけどね」/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>くう… </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>幸せでいなさいよ泣泣 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「心配してくれるのはうれしい。うれしいって言い方はよくないのかもしれない」 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「確かにカルテだとか、記憶がないだとか色々重大な問題があるんだけど、不思議と前みたいに心臓がバクバクしたり頭の中がグチャグチャになったりしないんだ。頭もすっきりしているしいいのかもしれない」/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>い、いいのか…？いいならいいんだけど…… </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「新薬を投与されている可能性があるね。君が過ごしやすいと感じているなら、薬のことは否定しないけど……」ちゃんと同意した上での治療なのか？ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……麻痺しないでね。傷付くことや危険や恐れに慣れないで。忘れたときは僕の平凡さを見て思い出してよ」/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>choice 言う 言わない (choice 言う 言わない) ＞ 言う</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>な、なにー！？ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「落ち着いている方が頼りにならない？テオが平凡だったらみんな平凡になるためにたくさん努力を積み重ねないと」/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「た、頼りに……？」何の話だ？ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「カロがそういう自分がいいなら、いいと思うけど。ちょっとでも無理してるなら、自然体でいてよ。僕は気にしないし」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「落ち着いてなくても、頼りにはすると思うよ。だって僕たちはずっとそうやって生きていたじゃない」/ </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>ほよん…… </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「うん」色々言いたいことあるが今ではないと判断。 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「自然体…は自然に。そのうち」多分。今はこれが自然な感じなのでよくわからなくなってきた。 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「部屋出る？」/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ハァ　ハァ　ハァ　何が起こるんだ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>何が起こるんだ… </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……うん。もう院内にいないのかな……」出よう！/ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたたちが部屋から出ていけば、走り去る人影を目撃する。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>おそらく犯人で間違いないだろう。男は、階段を上り、廊下の奥へ進んでいった。<br><br>《アイデア》 or 《ナビゲート》を判定すること。 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=70 アイデア (1D100&lt;=70) ＞ 66 ＞ 成功</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=60 アイデア (1D100&lt;=60) ＞ 87 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>テオは、あの方向にあるのは『遺体安置室』だと分かる。しかし、現在盗難事件が立て続けにおきているために、院内のどこよりも厳重なセキュリティが敷かれているはずだった。/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「いた！ 遺体安置室に向かったんだ！」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「今あそこはセキュリティが厳重だから、入る前に捕まえられるはず……！」/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「行こう！」/ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>向かっていけば、何人もの警備員たちが床に倒れていた。急いであなたが安否を確認するのであれば、気絶しているらしいことが分かる。<br><br>彼等の状態について、《医学》 or 《薬学》を判定可能。/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>ｾﾞｪ ﾊｧ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=80 医学 (1D100&lt;=80) ＞ 55 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>強い睡眠導入作用のある薬を用いられたようだ。犯人は薬剤への造詣が深いのかもしれない。 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「眠剤を使われたみたいだ……。犯人には……薬の知識が……あるんだ……」ｾﾞｴ/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「落ち着いたらでいいから」話すの。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>草　ザコくてすまない </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「かなりの手練れだ。何者なんだろう」探してみる。/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>転生したらよわよわなの大変だ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>前世では熊を圧倒していたのに… </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>遺体安置室の扉は鍵がかけられていない。この先に向かったのだろう。 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「もう中に入ったのか。急がないと……」息整ってきた。遺体安置室に入ります！/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>熊の呪いかも… </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>あのときの熊が、蝶になっている！？ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>薄暗い室内があなたたちを出迎える。この部屋は遺体の保存のために非常に寒く、長居は避けるべきだ。 </dd></dl>
+<dl style="color:#888888" class="main tab_5"><dt>KP</dt><dd>探索箇所（遺体安置室）<br>［　待合室　/　処置台　/　遺体保管庫　］<br><br>※左から順に現在位置から近い距離にある。順に探索することを推奨。 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>右端のタブに「遺体安置室」の探索箇所を提示しました。 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>熊が……蝶に……！？ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ありがとうございます！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>了解です！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>近い順に見て行きましょうか </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ひら・・・ひら・・・ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>はーい！ </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>※ KP情報<br>全ての探索が終わらないと、【遺体保管庫】に向かうことはできない。また、遺体安置室内は温度が低いため、探索箇所ごとに《CON》を判定する。<br>KPは失敗数を数えておくこと。 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「冷えるな……」待合室を見ます！/ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>‖ 探索前に<br>《CON*5》の判定をお願いします </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>CON8でしぬ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=8*5 CON×5 (1D100&lt;=40) ＞ 47 ＞ 失敗</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=9*5 CON×5 (1D100&lt;=45) ＞ 49 ＞ 失敗</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>どっちもどっちかい </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>凍えるか </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>小さく手足が震えている。寒さに眉を顰め、体温を惜しむようにあなたたちは腕を摩るだろう。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>いざとなったら燃えるから安心してよ（？） </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>■ 待合室　<br><br>遺族への説明などが行われる部屋だ。簡素な机と椅子が並べられており、机の下には誰かの荷物らしき箱が乱雑に置かれている。<br><br>判定可能技能：<br>机に《目星》 or 《図書館》 / 《アイデア》or《目星》　/　箱を調べる　※３つとも別情報 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ありがとう…… </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>■ 待合室　カロ✖テオ✖ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>机から見ます！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=70 図書館 (1D100&lt;=70) ＞ 30 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=70 アイデア (1D100&lt;=70) ＞ 84 ＞ 失敗</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>一緒に見る！ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=95 目星 (1D100&lt;=95) ＞ 51 ＞ 成功</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=60 アイデア (1D100&lt;=60) ＞ 82 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>机<br><br>手紙が一枚置かれている。何枚かあるうちの一枚のようで、前後の文脈は不明である。 </dd></dl>
+<dl style="color:#888888" class="main tab_0"><dt>▼待合室に放置されていた手紙</dt><dd>君には本当に感謝してる。<br>君は本当に僕に寄り添ってくれたし、間違いなく僕の人生の中で最も大切で、最高の友人だった。<br>僕がこの決断を下すことに、責任を感じないでほしい。<br>神様が設計した世界に、僕はうまくそぐうことができなくて、でもそれって僕の責任でも、君の責任でもないだろう？<br>もう恐怖を感じなくていいという事実に、悪夢を見なくて済むという解放に、僕はただただ胸を撫で下ろしているんだ。<br><br>だからね、感謝しているんだよ。<br>僕が最期に贈りたいと思った言葉は、ただこれだけだったんだから。<br><br>僕に出会ってくれてありがとう。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>《アイデア》or《目星》は……お二人とも、目星もどうぞ！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>感謝ッ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=65 目星 (1D100&lt;=65) ＞ 96 ＞ 致命的失敗</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>なぜ　なぜ…… </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=95 目星 (1D100&lt;=95) ＞ 51 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>ドローンが放置されている。現在は操作されていないようだ。 <br><br>カロは更に《機械修理》 or 《知識/2》 or 《生物学-20》 が振れる。<br><br>テオは別の場所を見ていて、振り向いた拍子にうっかりドローンを叩き落としそうになってしまった。ひやっとする。SANc0/1<br> </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>すみません　こんなことを </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「うわっ」セーフ！？ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>1D100&lt;=61 正気度ロール (1D100&lt;=61) ＞ 38 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>セーフ…… </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>ふう…… </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>セーフだったからヨシ！！ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ぜんぶ30以下でやばい </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ｗｗｗｗｗ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>笑ってしまった </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=20 機械修理 (1D100&lt;=20) ＞ 66 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>共有してもらったら…テオもふれてよいです </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>わーい！ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「動いてない？こういうの詳しい？」/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「あ、さっき触っちゃったのドローンだったんだ」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「うーん、特別詳しくはないんだけど」一応見てみるか </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=60-20 生物学 (1D100&lt;=40) ＞ 57 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>他のも振って◎ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>たすかりmass </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=65/2 知識 (1D100&lt;=32) ＞ 21 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>たすかりのかたまり </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>さっすが </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>やったー！！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>なかとみのかまたり </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>ドローンに散布装置が装着されていることに気がつける。 おそらく農薬散布などに使用されるものだろう。装置内を調べても何も入っていない。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ええええ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>何をまくために！？こわい </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>おにはそと…ふくはうち… </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>こわすぎ！！！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「これ、農薬なんかを散布するのに使われるようなものだね。中身は……空みたいだけど」/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>豆まきマシーン！？ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「農薬？なんで病院にあるんだろう」/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>転生してきた合計の人生分豆食べよう </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「うん。何を……まこうとしていたんだろう」何となく嫌な予感がしてぞっとする。 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>箱を調べます！/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>すごい 豆地獄だ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>箱の中には、スプレー缶のような何かが数個、収められていた。 スプレー缶には大きなリングが備え付けられており、まるで手榴弾の安全ピンのように感じられるだろう。 <br><br>銃火器に関する技能 or 《知識》（HO2は-20）  </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=65-20 知識 (1D100&lt;=45) ＞ 93 ＞ 失敗</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=75 拳銃 (1D100&lt;=75) ＞ 60 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>かっこいい </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>カロは、スプレー缶のようなそれが手投弾だと理解できる。 しかし、おそらくは催涙ガスの散布やスモークが目的であり、炸薬の詰まれた爆弾ではないようだ。 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>かっこいい </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>待合室は以上です </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>はーい！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「何かわかる？」/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「手投弾だ。爆発するやつじゃなくて、催涙ガスかスモークかな」/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「物騒だな。なんでそんなものがこの部屋に……」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「護身用に持っていきたいけど、ガスマスクをしていたから意味ないかな」/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「持っておくだけ持っておこう」鞄にしまっておく。/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「ありがとう」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>では、処置台へ……/ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>■ 処置台 <br>‖ 扉を開ける前に <br>《CON*4》 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=8*4 CON×4 (1D100&lt;=32) ＞ 16 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ふう </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=9*4 CON×4 (1D100&lt;=36) ＞ 60 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>■ 処置台 カロ✖テオ○ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>さむすぎる </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>カロちん…！！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>テオはこの寒さにもなれてきたのか、どうにか耐えられそうだ。<br><br>カロは小さく手足が震えている。寒さに眉を顰め、体温を惜しむようにあなたは腕を摩るだろう。 寒さにより、細やかな動きをすることが難しくなってきている。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>扉を開ければ、簡素で無機質な部屋が広がる。 中央には、運ばれてきた遺体に処置をするための寝台が一つ。周囲には器具などが散見されている。 寝台の上には覆うように黒いシーツが被せられている。 <br><br>《目星+20》  </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=65+20 目星 (1D100&lt;=85) ＞ 87 ＞ 失敗</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>なんでやねん </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=95 目星 (1D100&lt;=95) ＞ 1 ＞ 決定的成功/スペシャル</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>すごすぎる </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>見たぞ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>カロだけが、器具の置かれている机のそばに血濡れた拳銃が一丁置かれていることに気が付く。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>いいな カロだけ気付くの </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>取りに向かうのであれば<br>《拳銃》 or 《知識-20》  </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>クリチケをどうぞ… </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ヤタ！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ カロ・ホースマン ] 🐴 : 0 → 1 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=75 拳銃 (1D100&lt;=75) ＞ 15 ＞ スペシャル</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたはそのセミオートマチックピストルに見覚えがある。 9mm口径のそれは、軍隊で採用されているものだ。  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>持ち主の影を感じながら、カロはそれに手を伸ばす。  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>その瞬間、黒いシーツの覆われた寝台が軋んだ音をあげた。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>え！？ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>シーツは“内側から”剥がされて、それは姿を現す。<br><br>がしゃん。<br><br>メスや洗浄器具、薬瓶が落下する鋭利な音が響いた。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ｷｮﾜｰ！！！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>そして青白い色のそれは、テオへ飛び掛かり、不意をつかれたあなたは冷たい肉の塊が自分を締め上げるのを皮膚で感じた。<br> </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>眩い光を反射するメスを掴み取った男は、鋭い切っ先を柔い肌へ向ける。<br><br>あなたたちは、位置関係や置かれている状況は異なれども、同時に理解する。<br><br>寝台の上に寝かされていた男が飛び起きた。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>そして男は、“すでに何者かによって解剖されてしまったかのように”身体中に傷を負っている。明らかに血の抜かれた肌は青白く、目は落ち窪み、ところどころ切り開かれた肉が見え隠れしている。<br><br>死人が飛び起きるのを目撃した　SANc 1/1d6+1 </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>★ 秘匿 HO1<br><br>あなたは、正気度減少の値に関わらず、発狂しない。<br>また、あなたが男に拘束されている状況だとしても、テオが拘束されている状況だったとしても、動揺することはない。<br>あなたは落ち着き払っている。<br><br>《アイデア》 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>1D100&lt;=61 正気度ロール (1D100&lt;=61) ＞ 44 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>★ 秘匿 HO2<br><br>あなたは死者の男の顔に見覚えがあるような気がする。<br><br>《アイデア》 </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ テオ ] SAN : 61 → 60 </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>CCB&lt;=70 アイデア (1D100&lt;=70) ＞ 51 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>なに！？なんなの！？ </dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>CCB&lt;=60 アイデア (1D100&lt;=60) ＞ 75 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>焦っても仕方がない。状況が変わるわけではない。あなたはただ、目の前の状況を少しでも好転させられるように動くだけだ。 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>1D100&lt;=75 正気度ロール (1D100&lt;=75) ＞ 56 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>集団自殺を図ったという資料の中に、この男の顔があったような気がする。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ カロ・ホースマン ] SAN : 75 → 74 </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>はえ～！？ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>｜　現在の状況<br>拘束されているテオの首元に、死人の男がメスを突きつけている。<br><br>｜　選択可能行動<br>※それぞれ、どちらかひとつのみ。二人ともが行動を決定したのち、それぞれの処理を行っていく。<br><br>＜拘束されているPC＞<br>・男への説得<br>・拘束から脱出を試みる<br><br>＜拘束されていないPC＞<br>・男への説得<br>・拳銃で男を撃つ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>説得は15なのでできないｶﾓ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>わたくしも説得30でございます </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>どちらかというと、技能はさておき選択したいほうを選んでも…いいかも。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>やはりこぶしか </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ｵｵ 了解です！ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>はーい！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>テオもやはり暴力タイプかも </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>脱出を試みます！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>◎ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>説得します！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>◎ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>いいな　説得えらい </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>カロの処理から。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたは男へ言葉を投げる。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>男は「う……」や「がぁあ……」といった、言葉にならない言葉ばかりを繰り返していた。<br> </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>カロの説得RPがもしあれば　このタイミングでどうぞ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ゾンビだ… </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「メスを遠くに投げて大人しく降伏するならば撃たない」といいつつも言葉が通じるのか不安なので拳銃を構える。/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ゾンビになっちゃうよ　噛まれないでね </dd></dl>
+<dl style="color:#888888" class="main"><dt>死人の男</dt><dd>「……」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたの言葉に構わず、男の腕はぎりぎりと拘束されている彼を締め上げていく。このゾンビに、言葉をかけることなんて、何の意味もないのだろうか。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ゾンビはイヤーッ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>しかし、死者の男の目には、黒い涙が浮かんでいた。だらだらとタールのような漆黒の液体を両目から流して、何か、聞き取ることのできない言葉を繰り返している。しかし、腕の力は弱まらなかった。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>テオの処理。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>脱出を試みる。&lt;STR17&gt;との対抗をどうぞ。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>つんよ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>RESB(13-17) (1d100&lt;=30) ＞ 89 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたの抵抗も虚しく、男の腕がぎりぎりと喉を締め上げる。酸素が回らず、視界がぼやけていく。首元に突き刺さるメスの鋭利ささえ、今はどこか遠い。<br><br>HP-（1d4+1d2） </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ク、クリチケつかう！？ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>1d4+1d2 (1D4+1D2) ＞ 3[3]+1[1] ＞ 4</dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ テオ ] HP : 10 → 6 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>しぬど </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>死ぬなーーーー！！！！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>その時、大きな音を立てて扉が開かれる。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>お </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>だ、だれェ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>開いた扉側のプレートには【遺体保管庫】の文字があり、ガスマスクをつけた男がいた。あなたたちが追っていた犯人が、そこにいる。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「セーヴン……！」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>男の目は見開かれる。その視線の先には、死者の男の姿がある。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「だめだ。これ以上君を、冒涜するわけにはいかない」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「だめだ。だめだ。やらなきゃいけない。私が、私が……！」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>パン！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>肩を跳ねさせ、神経を鷲掴まれるような轟音。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ｵﾜー </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>その音の中には呆気なさと、無情さが含まれている。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>人類史上、最も人の命を散らした音。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>男の体には二つ目の穴があき、男はゆっくりとそのまま後ろに倒れていった。<br><br>SANc 0/1d4 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>1D100&lt;=60 正気度ロール (1D100&lt;=60) ＞ 60 ＞ 成功</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>1D100&lt;=74 正気度ロール (1D100&lt;=74) ＞ 46 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「すまない……。すまない……」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>男は項垂れていたが、あなたたちに視線を向けると、弱々しく立ち上がり、遺体保管庫へ戻っていった。鍵をかけた様子はなく、追いかけることができるだろう。/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……た、たすかった……？」咳き込む </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>応急手当ってできますか？ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>はい！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ｻﾝｶﾞﾂ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=50 応急手当 (1D100&lt;=50) ＞ 92 ＞ 失敗</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>ｱﾚ… </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ｵｵ 気持ちがうれしいからね、ね </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>およ… </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>く、クリチケを！使います！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>いいですよ </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ カロ・ホースマン ] 🐴 : 1 → 0 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=50 応急手当 (1D100&lt;=50) ＞ 88 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>惜しい </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>ﾎﾞﾛﾎﾞﾛ……。 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「自分でできる？」手当やってみようとしたけどうまくできなかった。とりあえず患部を押さえる。/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「ああ、うん、これくらいなら多分……」医学、いくよ。 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=80 医学 (1D100&lt;=80) ＞ 74 ＞ 成功</dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>さっすが </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ふう </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>1d3回復！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>1d3 (1D3) ＞ 3</dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ テオ ] HP : 6 → 9 </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>えらいっ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「ガスマスクを追おう。まだ遺体安置室にいるはず……」/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「わかった。テオはゆっくりでいい」追おう。/ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>中へ入っていくことができる。 <br><br>■ 遺体保管庫<br>‖ 探索前に <br>《CON*3》  </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=8*3 CON×3 (1D100&lt;=24) ＞ 5 ＞ 決定的成功</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>元気すぎる！ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=9*3 CON×3 (1D100&lt;=27) ＞ 57 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>えら～！ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>元気！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>カロも成功扱いにしようかな。<br><br>手足は震えている。しかし、目の前には対処すべき事態があり、怪我を負ったテオが思ったよりも平気そうにしていることから、憂慮が消える。問題なく行動できるだろう。 </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>■ 遺体保管庫　カロ○テオ○<br> </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>中に入っていけば、あなたたちは男と対峙することになる。 男は、ガスマスクを身につけ、手元に小さなスイッチを持っていた。 <br><br>《アイデア》 or 《薬学》 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>うれし！！！ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=60 アイデア (1D100&lt;=60) ＞ 70 ＞ 失敗</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>中島みゆき　糸 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=85 薬学 (1D100&lt;=85) ＞ 55 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>おそらく、新薬とやらを散布するつもりなのだろう。 <br><br>あなたは考える。<br><br>遺体安置室にも火災報知器は設置されており、スプリンクラーヘッドの設備もある。 スプリンクラーは貯水されており、その栓は熱によって溶ける仕組みになっている。 <br><br>つまり、スプリンクラーを発動することができれば、散布される新薬の効果を放水によって打ち消すことができるかもしれない。  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>秘匿へ送信しました。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>男は沈黙を打ち破るように、口を開いた。  </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>うおお！大科学実験！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「……手間をかけさせてしまってすまない」  </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「私を捕まえにきたんだろう。これ以上逃げるつもりはない。どんな処分でも受ける」  </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「ただ、最後に悲願を達成させてほしい」  </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「元々君たちを傷つけるつもりなんて毛頭ないけれど、それさえ許してくれれば、私は抵抗しない。神に誓おう」  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>〈 会話選択肢① 〉 <br><br>男がいつスイッチを切るかわからないため、会話は選択肢の中から選んで展開することになる。 選ぶことができるのは、どちらか一つのみ。 <br><br>・薬の効果について尋ねる <br>・男の目的について尋ねる  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ええええ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>どっち気になります！？ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>カロくんに使われた可能性があるなら薬の効果は気になるけど……<br>目的が気にならないわけではない…… </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>目的知れたら薬についてものちのち知れそうな気がするけど逆もしかりだな </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>じゃんけんします？ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>そうしましょう！！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>choice グー チョキ パー (choice グー チョキ パー) ＞ パー</dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>choice ぐ ち ぱ (choice ぐ ち ぱ) ＞ ぐ</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>また勝ってしまった　敗北が知りたい </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>風格 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ワロタ　負け無し </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>じゃあ薬のことを聞いてもいいでしょうか？<br>テオは薬師だし目的より未知の薬の効能が気になりそう </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>はーい！おねがいします！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……薬の効能は？ カロにも投与したんでしょう。教えてください」/ </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「とあるものを消し去る薬だ」  </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「といっても、持続時間は短い。まだ試薬なものでね」  </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>はえ～～～ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>男はカロに視線を向ける。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「カロ……。君は、自分の何が失われてしまったかわかるかい？」  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>〈 行動選択肢➁ 〉 <br><br>・カロの失われたものについて思考を巡らせる <br>・処置室にいた死人の男について尋ねる  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>PL共有<br>死体の男の正体自体は、<br>「集団自殺を図ったという資料の中に、この男の顔があったような気がする。」<br>らしいです。なぜゾンビになっていたのかは不明。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ほえ～！！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>どっちの選択肢でも大丈夫です！ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>はーい！ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>思考を巡らせるか </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ぐーるぐる </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>失われたものについて思考を巡らせます。ぐるぐる。/ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>自由に考えることが可能。 <br>あるいは、テオのみ《アイデア》で判定可能。 / </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>では……。 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=70 アイデア (1D100&lt;=70) ＞ 4 ＞ 決定的成功/スペシャル</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>すごい </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>え！！！うれしい！！！！ </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>薬を服用されてからのカロの様子は確かにおかしかった。 普段であれば動じるようなことでも動じず、まるで感情が失われてしまったかのように冷静さこともあった。 彼から奪われたものは『恐怖』なのではないか、と思い至ることができる。 <br><br>※この情報をHO1に共有するかどうかは、のちのち選択することになるため、今は胸にしまっておいてください。 </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>思い至るというか……多分　確信しますね　出目…… </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>すげぇ…… </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>ハハ～…… </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>カロちん……（胸にしまっておきます） </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>焦りだとか不安といったものではないかと考え、テオくんの方を一瞥します。/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>泣 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>男は、思考を巡らせるあなたたちの様子を見つめたのち、口を開いた。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「私は、君たちが察している通り、たくさんの罪を犯した」  </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「けれど、それほどの罪を冒してでも、これ以上、私と同じ思いをする人間を増やさないと決めたんだ」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>そして、男はカロを見つめた。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「彼にはケアが必要だ。君もわかっているんじゃないか」<br> </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「君たち二人には、きっと私の考えが理解してもらえると思ったんだ」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「……私はね」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「ただ、カロに、悪夢を見ること無く、魘されて飛び起きることもなく、安らかに眠って欲しいだけなんだよ」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「ドクター・テオ」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「きみは、隣にいるその人に、やさしい眠りについてほしいとは思わないのか？」/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>それは、わかるぜ…… </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ﾋｮﾜ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>どうすればいいんだよーーー！！！！！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>こいつにレスバで勝てない </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>く………… </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>だって……テオもそう思うもん </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>ほよよ… </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「思いますよ。ずっとそう思ってる。あなたの言うことや掲げた使命は正しく美しいものです」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「でも忘れ去ることで本当にカロは幸せになれるのでしょうか。それ自体は、きっと失くしてはいけないもののはずなのに」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「忘却は安寧への近道かもしれませんが……近道が最も正しい道だとは思いません。だからあなたに全面的に同意するのは難しいです」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「でも、カロのことを案じてくれてありがとうございます。僕が礼を言うのも変な話ですが……。この人はあまり自分を顧みないところがあるから」/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>なんもいえないよ～～～！（泣）（泣） </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>壁打ち<br>何も恐れないということは間違いなくひとつの強さだと思うけど、恐れずに進んだ先にいくつもの死への分岐点があって、それを迷わず選び取ってしまうんじゃないかということがテオには恐ろしいよ。<br>恐怖や痛みを感じることがないのは、危険だよ……。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「……君は、今までたくさんの人を助けてきたんだろう。たくさんの感謝を受けた。けれどそれでも正解に手を伸ばせない」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「私たちは、医者であって、神様ではないから」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「だからこそ、できることは全てする。悪魔に魂だって売る」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「見届けてくれ。今日、今ここが医術的特異点（シンギュラリティ）だ」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「過去。人類史の中で、罪のない女性や薬剤師が、愚昧だった人々によって、魔女だと迫害されたように」 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>そんなことはなぁ 前世で嫌ってほど知ったんだよォ </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「私たちが啓蒙していかなければならない。人を死に至らせる感情なんて、必要ない」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>そして男は、手元のスイッチに視線を落とした。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「このスイッチを押せば、私の背負っている荷物から、新薬が散布され部屋中に充満する」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「この遺体安置室から、私の担当していた病棟まで空気の通り道を作っておいた。きっとすぐに、彼らに届く」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男</dt><dd>「これが、私の医者としてできる、最後の処方なんだ」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>男の口ぶりからは、彼に一切の迷いがないことが伝わってくるだろう。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>＜　行動選択肢　＞<br><br>・男を撃つ<br>・追加選択肢（特定の技能に成功していたPCにのみ開示） </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>★ 《アイデア》　or　《薬学》に成功している場合のみ開示<br><br>・追加選択肢｜スプリンクラーを発動させる<br> </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>にょ～～～～ </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>死ぬなー！生きて罪を償わせるど。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>にょ～～～……　撃つ　撃たない </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>今までのCON失敗数によって、マイナス補正が発生する。<br>失敗回数×10 のマイナス補正を、全ての技能判定に発生させること。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>追加選択肢、ゲッチュしております。 </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>カロは-20<br>テオは-10 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>この男に死んでほしくは……ないのですが……ぶっ殺したかったらそれもそれで…… </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ﾉﾜ~~~~~~~ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>撃たないでおこう　ボコったら何か吐くかもだし　 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>押忍！大科学実験！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「シンギュラリティかどうかなどあなたが判断することではありません。私もあなたもただの医者で、神様ではないのだから」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「ただの医者は、ただ地道に目の前にいる患者を救っていくことしかできません。それがどんなに歯がゆく感じることだとしても、医者の持つ最も尊い使命だと私は信じています」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「あなたが全てを背負う必要はありません。ここは特異点ではないと信じて、知恵を繋いでいくことができるはずでしょう。人間には」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>スプリンクラーを作動させます！/ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>★ スプリンクラーを発動させる<br><br>手順① 鉄と酸素、海水を適切に取り扱うための《化学》or《薬学》<br>手順② 高所に届かせるための《跳躍》 or 《SIZ*5》<br><br>※どちらのPCがどの手順を担ってもよい。重複も可能。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ほえー！！！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ク… </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>SIZ11です　跳躍は初期値 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>10＆初期値です(^_-)-☆ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>どっちもどっちかい </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>跳躍の初期値は25です </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>はい。。。 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>おほほほ… </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>CCB&lt;=25 跳躍 (1D100&lt;=25) ＞ 32 ＞ 失敗</dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ﾋﾞﾖﾖﾝ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>惜しっ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>おしい </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>がんばろう </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>とりあえず①は薬学あるので担当しますね </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>はーい！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>いざとなったらクリチケあるし②お願いしようかな！？ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>がんばれ～！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>①いきます！ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>やるぞやるぞやるぞ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>判定どうぞ！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=85 薬学 (1D100&lt;=85) ＞ 49 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたはそれを慎重に化合させることができる。すぐに発熱反応が始まるだろう。 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「カロ！」ヘイパス！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>がんばえー！！！ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「！」やるぞ！ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>CCB&lt;=10*5 SIZ×5 (1D100&lt;=50) ＞ 14 ＞ 成功</dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ﾋﾞﾖﾖﾖﾖﾝ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>すげっ！！！！！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたは身軽にスプリンクラーに向かって手を伸ばす。そして酸素ガスを噴射するだろう。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>スプリンクラーが発動し、散布されはじめた試薬を打ち消していく。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ﾋｭｳ </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男（Dr.コール）</dt><dd>「そんな、…………そんな、……ッ」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男（Dr.コール）</dt><dd>「ジョン、マーク、トム、ブライアン、リー、キース、カルビン、バロン、タイラー、グレッグ、バーノン、」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>死体盗難容疑の男（Dr.コール）</dt><dd>「セーヴン…………！」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>男は肩を落とし、膝をついた。紡ぐ言葉は、祈りのようにも、あるいは弔いのようにも思えた。<br>　<br>男が項垂れたこと以外、その場に変化はない。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>入口で倒れていた男たちを発見したからか、あるいは騒ぎを聞きつけたからか、職員たちがこちらへ向かってくる気配がある。男の後処理は彼らに任せ、あなたたちはその場を後にするだろう。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたたちは、その場に訪れていた職員たちや院内警察に囲まれる。そして、すぐそばの待合室にて軽い事情聴取が行われたが、あなたたちの所属する部署や身分の信用から、あっさりと解放された。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>これでようやく、帰宅することができるのだ。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>冥界のようにうすら寒い遺体安置室から出ていけば、高所に位置する窓からは、すっかり暮れ始めた夕陽が見えていた。/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>スプリンクラー浴びたからびっしょりか </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「さ、寒い。大丈夫？」/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>さんざんだ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「なんとかね。ロッカーに着替えを置いてるけど、使う？」/ </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>結局家とか机が荒らされてたのってなんだったんだろう…？ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「余りがあったら貸して欲しい。ステーキハウスはまた今度かな」/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「確かあったはず……。なかったらそのまま風邪ひかないように帰ってね」はは </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「食事は……またいつでもいいよ。時間なら作るし」/ </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>なんだったんだろう… </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ゾンビに襲われたあとはさすがにステーキの気分じゃないだろう </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「そのうち乾くよ」つられて笑う。 </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>不思議だあ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「ほんと？よかった。あのさ、確かに悪夢を見たり、時々不安にかき立てられる時があったけど、旅をして得たものがたくさんあるから」大丈夫だと言いたい。 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「何よりこうして気軽に次の予定を決められるからね」/ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>そうして笑い合った、そのとき。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>どこから入り込んできたのか、あなたたちの周囲に、蝶がやってくる。ひら、ひらと白い雪のように舞い踊るそれらは、あなたたちの肩に触れた。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ｳｵｰﾝ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>え？ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>触れた箇所から、冷たさが伝わってくる。<br><br>捕らえようと、あるいは払いのけようとするかもしれないが──その一拍前に、蝶はふわりと飛び立って、どこかへ向かっていく。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>ひら、ひら。日の暮れかけた真っ白な廊下のなか、灯火のような白光の蝶がとんでいく。<br><br>ふと、あなたたちには思考が過った。 </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>★　秘匿　HO1<br><br>やはり自分は、何かを忘れている。<br><br>白い蝶をみた。どれほど前だったかは定かではない。けれど、そこまで前のことではないはずだ。確か、一か月くらい前。<br>ひとの手。足。時が止まったような空間。<br>それから──。<br><br>それ以上思考を巡らせる場合、《アイデア》の判定が可能。 </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>★　秘匿　HO2<br><br>HO1の様子に関する《アイデア》に失敗していた場合、ここで振り直すことが可能。既に成功していた場合、確信を持つことができる。<br><br>→　一回目の時点でクリティカルだったため、既に確信を持てている。<br><br>おさらいで描写を流します。 </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>薬を服用されてからのカロの様子は確かにおかしかった。普段であれば動じるようなことでも動じず、まるで感情が失われてしまったかのように冷静さこともあった。彼から奪われたものは『恐怖』ではないかと思い至る。それは確信にほど近かった。 </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>薬の持続時間がどれほどなのか、あなたには分からない。当事者であるカロに対して、説明をしておくべきなのかもしれない。しかし、一方であなたには思い至ることがある。カロの職業柄、彼には忘れてしまいたいことや、思い出したくないことが山ほどあるだろう。<br><br>自分が『恐怖が失われている』ことを口にすることで、カロに想定外のショックを与えることになるかもしれない。<br>どうするかは、あなた次第だ。<br><br>分岐<br>・「恐怖」だと指摘する<br>・「恐怖」だと指摘しない </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>ヒィ～～～ </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>これはカロと一旦RPをしてから決定しても大丈夫ですか？ </dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>CCB&lt;=60 アイデア (1D100&lt;=60) ＞ 80 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>はい、大丈夫です。 </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>ありがとうございます！ </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>失敗　＞　<br><br>肌。四肢。青白く、手遅れ。<br>どっと汗が噴き出て、あなたはそれ以上考えることをやめた。<br><br>SANc 0/1d3 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ほよ </dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>1D100&lt;=74 正気度ロール (1D100&lt;=74) ＞ 23 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ぬーん…… </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>のわー！！！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……あの人にはああ言ったけど。君にとっては忘れていたほうがいいのかな」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「私は君の失ったものが何かを知っている。でも君がそれを取り戻すべきなのかは分からない」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「君はどうしたい？」/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「どう」自分の腕をさする。 </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>壁打ち<br>真面目な話というか…信念や理想に触れるときなどは、前世の薬師・テオに精神性が寄るから、一人称がブレるという……設定。 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「聞いてから考えるのはダメ？」/ </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>朝開始にしておいてよかったかも　ちょうどいいくらいの時間になりそう </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「失くしたものの正体を知ったらきっと君は思い出す」 </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>うれしい </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「そのとき君がとても傷付くんじゃないかと思うとつらいんだ。思い出したことだけでなく、それを忘れてしまったということ自体にも。だから君が望まない限りはしたくない」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「それに……コールは薬の効果は一時的なものだと言っていた。私が告げなくとも、じきに君は思い出すだろう」/ </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>ふふ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>これは……どっちでもオケ！でも思い出すかもっていうのは確信があるわけではない……コールの話だから…… </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>はーい！くう　くう </dd></dl>
+<dl style="color:#888888" class="secret tab_3"><dt>KP</dt><dd>あの長いシナリオの続編として、短すぎず長すぎない感じだ。 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>考える。私って言うのずるくないと思ってる。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>草 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「今で。自分で決めたタイミングの方がいい」/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……頑固」呆れた。そう言うんじゃないかと思ってたけど～… </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>では、教えちゃおうかな。乗り越えてくれると信じて……。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>お互い様だよ！！ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「カロ。君が失くしたのは『恐怖』だよ。今の君は何も恐れていない」/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ク </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>テオはそれを、口にした。<br><br>途端、カロの脳裡には、巻き戻しされた映画のように、映像が流れだしてくる。 </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>★　秘匿　HO1<br><br>もっと早く突入すれば、間に合っていたかもしれない。<br><br>一か月前。<br>自分は任務を受けて、どこかへ向かった。脅威とするカルト教団があるとか、そんな内容で。<br>危険度が非常に高いから注意するようにと、散々勧告された。<br>そうだ。合図を待って突入した。<br>本当は、もっと早く突入するべきだったのかもしれない。<br>けれどあなたは、組織の指示を待った。<br><br>やっと突入した頃には、そこには静かな肢体だけが横たわっていた。その教団は、精神的に不安定なものを自死に至らしめ、それを贄として儀式を執り行うと知られていた。<br><br>倒れている男たちの体には、あなたの首元にかけられたものと、同じようなものが掛かっている。<br>国のために命を尽くし、そしてその果てが、“これ”だった。<br><br>あなたはそこに、境遇が似ていることによる憐憫や、同情。<br>あるいは、自分の判断を問い直す自責。<br>あるいは、それらすべての感情があった。<br><br>SANc 1d5/1d20 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ｲ~~~~~ﾝ </dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>★　秘匿　HO2<br><br>あなたが事実を伝えた途端。<br>カロの顔色が青ざめていく。泣いているかのような音が繰り返される。過呼吸を起こしている。<br>自分は、選択を間違えたのだろうか。<br>SANc 0/1d2 </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>1D100&lt;=60 正気度ロール (1D100&lt;=60) ＞ 73 ＞ 失敗</dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>1d3 (1D3) ＞ 3</dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>1D100&lt;=74 正気度ロール (1D100&lt;=74) ＞ 25 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>間違えました </dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>1d5 (1D5) ＞ 5</dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>1d2 (1D2) ＞ 1</dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ カロ・ホースマン ] SAN : 74 → 69 </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ テオ ] SAN : 60 → 59 </dd></dl>
+<dl style="color:#888888" class="secret tab_1"><dt>KP</dt><dd>整わない呼吸は、乱れたままあなたの不安を煽るばかりだ。<br>そして、抑え込まれていたあなたのなかの狂気が溢れ出す。<br>あなたはここで、＜不定の狂気【自殺癖】＞を発症する。 </dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>CCB&lt;=60 アイデア (1D100&lt;=60) ＞ 50 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="secret tab_2"><dt>KP</dt><dd>◎ </dd></dl>
+<dl style="color:#88b5d3" class="secret tab_1"><dt>カロ・ホースマン</dt><dd>ﾆｬﾜ </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>言わないほうがよかったのかなぁ　ウワ～～ッ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>カロはテオの手を引いて、窓から飛び降りようとする。<br>それだけが、自分たち二人にとっての救いなのだと、信じて疑わない。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>おい！！！！！ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>やばいよ！！！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>集団自殺てそういうこと！？ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>やばいバッド入ってんじゃん </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>正気であるHO2は、HO1に対して《精神分析》+50　が可能。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>負けるな… </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「カロ！」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=51 精神分析 (1D100&lt;=51) ＞ 66 ＞ 失敗</dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ﾎｱ~~~ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>ク、クリチケ！お願いします！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>どうぞ～ </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ テオ ] 🎫 : 1 → 0 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>CCB&lt;=51 精神分析 (1D100&lt;=51) ＞ 60 ＞ 失敗</dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ﾁｰﾝ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>一緒にDIVE </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>下に木があるかもだし！！！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>次の瞬間。<br>体が浮いていた。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>カロがテオの手を引いて、窓から飛び降りたのだ、と理解するのには時間がかかった。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>え！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>足が地面から離れたその瞬間、カロは正気に戻ることができる。<br>テオに対して行動や会話があれば、自由にできる。/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>最悪なタイミング </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>しぬ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>落ちながら会話や行動ができる（すごいので） </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>ちなみに受け身を取る場合の、判定は《跳躍》となります。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>なくて草 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「！テオ！」 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>この辺りは……いいかんじにゴネたり調整したり……してもらって大丈夫とされています。自由なので。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ゴネ…ゴネ… </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「このバカ！ いやバカは私か！ 言わなきゃよかった！」 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>ぎゃいぎゃい言いながら落ちててコメディーだ（のんきなKP） </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>やっぱり挟まるコメディー </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>くしくしっ！ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ワロタ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>おてんば大行進！ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「落ちてる！！」ｱﾜﾜ。 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「君が落としたんだよ！」 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>盾の呪文使って落ちるとか…！？ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ﾍﾞﾖﾖﾖﾖﾝｯってクッションになったり… </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「う、受け身！ 取れるよね！？ 君なら！」 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>高速詠唱　可としましょう </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>かっこいい </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「頼りにしてる！」/ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>▼＜盾＞　<br>コスト ： SAN1点<br>MP1点につき、装甲が1点ずつ付与される盾（15m立方）が出現する。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>かっこいい </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「受け身でどうにかなる高さじゃないでしょ！！」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ カロ・ホースマン ] SAN : 69 → 68 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>おもろすぎる　落とした人が正論言うてる </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ カロ・ホースマン ] MP : 10 → 6 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「とりあえず落ちるから！落としたけど！」装甲+4分の盾を作ります。/ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>落としたのに </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>笑い止まらん </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>テオの言葉を受け、カロは咄嗟に呪文を口にした。<br>15m立方の目に見えない盾が出現するとほぼ同時に、病院の垣根に落下する。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>周辺に人はいなかったようで、被害はないようだ。<br>自分たちもひやっ…とはしたが、傷はついていない。<br><br>　　HO1　SANc 1/1d3<br>　　HO2　SANc 0/1d3<br> </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>1D100&lt;=68 正気度ロール (1D100&lt;=68) ＞ 82 ＞ 失敗</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>1d3 (1D3) ＞ 2</dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ カロ・ホースマン ] SAN : 68 → 66 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>1D100&lt;=59 正気度ロール (1D100&lt;=59) ＞ 56 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>呪文が間に合うかどうかは、ギリギリだったはずだ。運が良かったのかもしれない。周囲を見渡せば、去っていく白い蝶の姿がみえた。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたの脳裡にはふと、どこかで目にした『死者と蝶』のコラムが思い出されるかもしれない。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>/ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>RPをしたら、〆になります。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>はーい！ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「助かった」ゼエ、ゼエ。死ぬかと思った。 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「テオを巻き込んで悪いと思っているけど、原因は言われて思い出したことじゃなくてそもそも勝手に弄られて適切なケアを受けなかったことだから！」早口。立ち上がって服についた汚れを払う。/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「ちょっと、それはそれで気になるんだけど」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「勝手にいじられた？ それでケアを怠ったって？」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「巻き込んだっていいからそういうのは教えておいてよ」慌ててついてく/ </dd></dl>
+<dl style="color:#ff9888" class="secret tab_2"><dt>テオ</dt><dd>自分も自宅が不法侵入されてるかもとか言ってないが　が </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「いや、知らない。覚えてないし。多分そういうことじゃない！？」多分。 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「適当なんだから……」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「これからは、どうでもいいことでも、要領を得ないことでも、話してくれたらうれしいよ。話せる範囲でいいから」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「それを、僕も適当に聞いておくからさ。息抜きに使ってよ」/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「ぐ……、うん。そのうち」 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「話すと長くなるから。今は寒いしボロボロだし」 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「あとさ、適当じゃなくておおらかという表現の仕方もある」/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>表現指導入って草 ありがとね…泣 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「うん。今じゃなくていいから」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「おおらか……かな？」プーさんの例の画像のような </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「まあ、いいよ。今日はそれで。無事だし」いろんなものに守られたのだろう </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……君のせいで死にかけたけど、君のおかげで助かった。助かったから、ありがとうって言っておくよ」/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「ものは言いよう」 </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「怖い思いをさせてごめん。怪我がなくてよかった」/ </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「いいよ。熊に襲われたときよりは怖くなかった」 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>「……冷えてきた。本当に風邪を引きそう。また連絡する」/ </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>「熊って。うん、帰ってゆっくり休んで」/ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>CON8だし絶対寝込む </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>RP以上で大丈夫です！！ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>連絡したら買い出し行くからね </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>は～い🌱 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>大丈夫です！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたたちには、あなたたちだけが有する感情がある。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>そして、今までの経験から培った恐怖がある。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>あなたのなかに残された「恐怖」は、あなたにとってどのような効果をもたらすだろうか。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>　　 </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>エンド1 - butterfly effect　両生還 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ﾎﾜｰ！！！！！！！ </dd></dl>
+<dl style="color:#888888" class="main tab_0"><dt>■　エンド1 - butterfly effect</dt><dd>＜SAN報酬＞　対象：HO1，HO2<br>生還　2d10<br><br>＜後遺症￤溶け出した恐怖＞　対象：HO1のみ<br>指摘されたことにより、HO1は恐怖への感覚が鋭敏になる。【1d6】か月の間、普段よりも些細なことに恐怖を感じる。 </dd></dl>
+<dl style="color:#888888" class="main tab_6"><dt>KP</dt><dd>【　真相　】<br><br><br>一か月前、探索者たちの赴任する病院で、PTSDの後遺症に悩む兵士たちが、集団自殺を引き起こした。彼らの集団自殺の背後には、神話事象の影が存在するが、ここでは語られない。<br><br>担当医だった『コール・リリーフ』は、この出来事に強いショックを受け、患者たちの精神をコントロールすること、とりわけ『恐怖』という感情を抑制することはできないか、と研究を進めた。＜新任の医師＞という謎の人物によって『＜ルリム・シャイコース＞の血液』を入手したコールは、それを使用して恐怖を消失させる薬を開発する。しかし、試薬であるために効果は24時間しか持続しない。<br>（オリジナル設定：『＜ルリム・シャイコース＞の血液』について<br>ルリム・シャイコースの棲むイイーキルスに全てを凍りつかせる特徴があったことから、精神的な氷漬け=感覚を愚鈍にさせる=恐怖を喪失させるという効果があることにしている）<br><br>また、研究への寄与をしてもらうために、コールは遺体安置室にある遺体を＜新任の医師＞に提供してしまう。これが『遺体安置室の盗難事件』のあらましである。<br><br>HO1が『自分が救うべき対象である（PTSDを発症している）』と考えたコールは、開発できた試薬を、HO1に処方するべきだと考える。これがシナリオ導入の出来事だ。この試薬に、＜新任の医師＞から得た情報をもとに、HO2の血液を混ぜ込むことによって、HO1に猛烈な摂取欲をかきたたせることに成功した。<br><br>これにより、強制的に試薬を処方されてしまったHO1は、探索中『恐怖』を感じるはずの出来事が起きても、恐怖を感じることがない。<br><br>HO1は実は一か月前の集団自殺を発見した張本人であり、強いショックによって任務に支障をきたすと組織に判断された結果、記憶を喪失している。<br><br>本シナリオでは、探索者の考え方や立場によっては同情の余地のある『医師・コール』の選択を認めるか、<br>そして、HO1の失われた感情が「恐怖」であると指摘するか、しないかという選択がある。<br><br>どの選択をとっても、それは間違いでも正解でもなく、今までの過程があって至った場所というだけの話だろう。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>秘匿抱え落ちしてしまいました　言う必要がなくて…… </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>A Bella!よすぎる </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>おほほ… </dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>2d10 SAN (2D10) ＞ 10[8,2] ＞ 10</dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ カロ・ホースマン ] SAN : 66 → 76 </dd></dl>
+<dl style="color:#ff9888" class="main"><dt>テオ</dt><dd>2d10 SAN (2D10) ＞ 12[9,3] ＞ 12</dd></dl>
+<dl style="color:#88b5d3" class="main"><dt>カロ・ホースマン</dt><dd>1d6 怖いよ～ (1D6) ＞ 5</dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ テオ ] SAN : 59 → 71 </dd></dl>
+<dl style="color:#888888" class="main tab_0"><dt>KP</dt><dd>カロ・ホースマン<br><br>・CF<br>[main]<br>CCB＜=95-20 目星 (1D100＜=75) ＞ 1 ＞ 決定的成功/スペシャル<br>[main]<br>CCB＜=95 目星 (1D100＜=95) ＞ 1 ＞ 決定的成功/スペシャル<br>[main]<br>CCB＜=1 人類学 (1D100＜=1) ＞ 96 ＞ 致命的失敗<br>[main]<br>CCB＜=1 薬学 (1D100＜=1) ＞ 98 ＞ 致命的失敗<br><br>・通常成功　0/1d10 で成長チェック<br>目星<br>拳銃<br>聞き耳<br>頭突き<br>回避<br>図書館<br><br><br>テオ<br>・CF<br>[main]<br>CCB＜=65-20 知識 (1D100＜=45) ＞ 5 ＞ 決定的成功/スペシャル<br>[main]<br>CCB＜=70 アイデア (1D100＜=70) ＞ 4 ＞ 決定的成功/スペシャル<br>[main]<br>CCB＜=8*3 CON×3 (1D100＜=24) ＞ 5 ＞ 決定的成功<br>[main]<br>CCB＜=85 薬学 (1D100＜=85) ＞ 100 ＞ 致命的失敗<br>[main]<br>CCB＜=65 目星 (1D100＜=65) ＞ 96 ＞ 致命的失敗<br><br>・通常成功　0/1d10 で成長チェック<br>図書館<br>薬学<br>目星<br>こぶし<br>医学 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>お疲れさまでした🌱 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>長さもちょうどよく、たのしかった…… </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>ルン…🎵　最も右端のタブに真相を追加しました </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ありがとうございます！！！ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>はえ～～～コールくん…… </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>HO1が発見してたんだ、集団自殺…それはショックだよね </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>く……　でも話聞いてくれるの嬉しい！！やっぱ過酷な旅をしてきたふたりにしかない物があると思うから </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>"魂"の繋がりがあるから… </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>いろいろ気になるところも残しつつで……いい余韻だ～～～ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>HO2のストーカー（仮）疑惑、血液を盗むための…だったのかな…。 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>こわい </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>そうなのかも…！？たしかにいつの間に血液を入手されていたんだ？とは思った </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>明記されてるところはなかったんですけど、たぶん…。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>なるほどなるほど……　お互い生まれ変わっても大変で笑う </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>めちゃくちゃ楽しかったです～～ 新しい二人の関係と、変わらないところと、いろいろ見えてよかった～～～ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>よかった〜〜🐕💊 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>狗神と春鬻は……もう出ないかもしれませんが……またくしくしの世界観で集いたいですね </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>そうですね… </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>わかる　前よりちょっとした言い合いができてうれしい…　 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ですね… </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>くしくしじゃなくても遊んでください！よろしくお願いします！いつもありがとうございます！！ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>こちらこそいつもありがとうございます！！遊んでくださ～～い！大声　楽しかったです！！！めちゃめちゃしみじみタイムです </dd></dl>
+<dl style="color:#ff9888" class="group tab_4"><dt>テオ</dt><dd>CCB&lt;=85 薬学 (1D100&lt;=85) ＞ 72 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="group tab_4"><dt>テオ</dt><dd>CCB&lt;=65 目星 (1D100&lt;=65) ＞ 48 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="group tab_4"><dt>テオ</dt><dd>薬学100Fだった </dd></dl>
+<dl style="color:#ff9888" class="group tab_4"><dt>テオ</dt><dd>1d6 薬学 (1D6) ＞ 3</dd></dl>
+<dl style="color:#ff9888" class="group tab_4"><dt>テオ</dt><dd>CCB&lt;=70 図書館 (1D100&lt;=70) ＞ 38 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="group tab_4"><dt>テオ</dt><dd>CCB&lt;=85 薬学 (1D100&lt;=85) ＞ 29 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="group tab_4"><dt>テオ</dt><dd>CCB&lt;=65 目星 (1D100&lt;=65) ＞ 100 ＞ 致命的失敗</dd></dl>
+<dl style="color:#ff9888" class="group tab_4"><dt>テオ</dt><dd>CCB&lt;=58 こぶし (1D100&lt;=58) ＞ 50 ＞ 成功</dd></dl>
+<dl style="color:#ff9888" class="group tab_4"><dt>テオ</dt><dd>CCB&lt;=80 医学 (1D100&lt;=80) ＞ 25 ＞ 成功</dd></dl>
+<dl style="color:#88b5d3" class="group tab_4"><dt>カロ・ホースマン</dt><dd>CCB&lt;=1 人類学 (1D100&lt;=1) ＞ 15 ＞ 失敗</dd></dl>
+<dl style="color:#ff9888" class="group tab_4"><dt>テオ</dt><dd>1d10 目星 (1D10) ＞ 10</dd></dl>
+<dl style="color:#88b5d3" class="group tab_4"><dt>カロ・ホースマン</dt><dd>1d10　じんるい (1D10) ＞ 7</dd></dl>
+<dl style="color:#88b5d3" class="group tab_4"><dt>カロ・ホースマン</dt><dd>CCB&lt;=1 薬学 (1D100&lt;=1) ＞ 98 ＞ 致命的失敗</dd></dl>
+<dl style="color:#88b5d3" class="group tab_4"><dt>カロ・ホースマン</dt><dd>1d10 薬学 (1D10) ＞ 2</dd></dl>
+<dl style="color:#88b5d3" class="group tab_4"><dt>カロ・ホースマン</dt><dd>CCB&lt;=75 拳銃 (1D100&lt;=75) ＞ 2 ＞ 決定的成功/スペシャル</dd></dl>
+<dl style="color:#88b5d3" class="group tab_4"><dt>カロ・ホースマン</dt><dd>CCB&lt;=71 聞き耳 (1D100&lt;=71) ＞ 22 ＞ 成功</dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>薬学のファンブル　怖すぎるのに今日だけで三回見た </dd></dl>
+<dl style="color:#88b5d3" class="group tab_4"><dt>カロ・ホースマン</dt><dd>CCB&lt;=63 頭突き (1D100&lt;=63) ＞ 50 ＞ 成功</dd></dl>
+<dl style="color:#88b5d3" class="group tab_4"><dt>カロ・ホースマン</dt><dd>CCB&lt;=61 回避 (1D100&lt;=61) ＞ 94 ＞ 失敗</dd></dl>
+<dl style="color:#88b5d3" class="group tab_4"><dt>カロ・ホースマン</dt><dd>1d10 回避 (1D10) ＞ 8</dd></dl>
+<dl style="color:#88b5d3" class="group tab_4"><dt>カロ・ホースマン</dt><dd>CCB&lt;=30 図書館 (1D100&lt;=30) ＞ 61 ＞ 失敗</dd></dl>
+<dl style="color:#88b5d3" class="group tab_4"><dt>カロ・ホースマン</dt><dd>1d10 図書館 (1D10) ＞ 7</dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>二人の姿をまた見られて嬉しく…楽しかったです🌱 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>薬は正しく服用しよう </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>乱用ダメ、絶対。 </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>草　薬学って難しい </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>途中コメディパート入ったのもうれしかったです ナイスDJ…… </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ほんとに！ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>いつもの味ですね　見たくって… </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>ルン </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>ありがとうございました </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>また、もし二人継続行ったりするなら…ログを。ください。何なら回します。 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>お元気で…（よよよ…） </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>えー！！全然お渡しします！！！ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>ヤッタ～ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>群青とエトワに行きたいねっていう話をしておりました </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ﾔｯﾀ～～～！わたします！ </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>フランスに行くぜ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>キャンペーンだ　良すぎる </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ﾌﾌﾌ 元気に生きて帰ってきたい できるかな❓ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>できてください </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>祈っています… </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>ピンチになったらコメディになるから死なない！ </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>ウォ～ </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>確かに </dd></dl>
+<dl style="color:#ff9888" class="zatsudan"><dt>テオ</dt><dd>ウォ～ また会う日まで……👋 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>👋 </dd></dl>
+<dl style="color:#88b5d3" class="zatsudan"><dt>カロ・ホースマン</dt><dd>👊 </dd></dl>
+
+</div>
+<footer></footer>
+
+<script>
+const Hide = (checkbox) => {
+  const elmntTarget = document.getElementsByClassName(checkbox.id)
+  for (let intCount = 0; intCount < elmntTarget.length; intCount++) {
+    const message = elmntTarget[intCount]
+    const contexts = message.className.split(' ')
+    let elmntChecked = checkbox.checked
+    contexts.forEach((context) => {
+      const contextCheckbox = document.getElementById(context)
+      if (contextCheckbox) {
+        elmntChecked &= contextCheckbox.checked
+      }
+    })
+    message.style.display = elmntChecked ? 'none' : ''
+  }
+}
+</script>
+</body>
+</html>
